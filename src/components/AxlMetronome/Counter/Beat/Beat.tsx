@@ -123,7 +123,7 @@ class Beat extends React.Component<IProps, IState> {
         break;
     }
   }
-  public getState(): Status {
+  public getStatus(): Status {
     return this.beatState;
   }
   public getTempo(): number {

@@ -100,7 +100,7 @@ class Time extends Component<IProps, IState> {
     const refIndicator = this.refIndicator.current!;
     const progress = refRing.getProgress();
     this.setProgress(progress);
-    if (refIndicator.getState() === Status.Running) {
+    if (refIndicator.getStatus() === Status.Running) {
       refIndicator.pause();
       this.isDragging = true;
     }
@@ -171,9 +171,9 @@ class Time extends Component<IProps, IState> {
     const refRing = this.refRing.current!;
     return refRing.getProgress();
   }
-  public getState(): Status {
+  public getStatus(): Status {
     const refIndicator = this.refIndicator.current!;
-    return refIndicator.getState();
+    return refIndicator.getStatus();
   }
   /* istanbul ignore next */
   public init(newProps: IProps): void {

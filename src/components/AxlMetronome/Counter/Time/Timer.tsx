@@ -83,7 +83,7 @@ class Timer extends React.Component<IProps, IState> {
     this.postCountResume();
     this.status = Status.Running;
   }
-  public getState(): Status {
+  public getStatus(): Status {
     return this.status;
   }
   public getTimeToCount(): number {

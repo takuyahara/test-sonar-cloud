@@ -1,10 +1,8 @@
 import React, { createRef, RefObject } from 'react';
 import _ from 'lodash';
 import Time from './Time/Time';
-import Beat from './Beat/BeatAxl';
-import Status from './Time/Status';
-
-// TODO: optimize to Storybook
+import Beat, { StatusBeat, StatusIncrement } from './Beat/BeatAxl';
+import StatusTime from './Time/Status';
 
 interface IProps {
   tempo: ITempo;
@@ -78,7 +76,7 @@ class Counter extends React.Component<IProps, IState> {
     const progress = refTime.getProgress();
     refTime.setProgress(progress);
     refBeat.setProgress(progress);
-    if (refTime.getState() === Status.Paused) {
+    if (refTime.getStatus() === StatusTime.Paused) {
       refBeat.pause();
     }
   }
@@ -94,17 +92,31 @@ class Counter extends React.Component<IProps, IState> {
     const refBeat = this.refBeat.current!;
     // const progress = refTime.getProgress();
     // refBeat.setProgress(progress);
-    if (refTime.getState() === Status.Running) {
+    if (refTime.getStatus() === StatusTime.Running) {
       refBeat.resume();
     }
   }
-  public setTempo(newTempo: number): void {
-    const refBeat = this.refBeat.current!;
-    refBeat.setTempo(newTempo);
-  }
-  public getState(): Status {
+  public setTempo(newTempo: ITempo): void {
     const refTime = this.refTime.current!;
-    return refTime.getState();
+    const refBeat = this.refBeat.current!;
+    const progress = refTime.getProgress();
+    refBeat.setTempoRange(newTempo);
+    refBeat.setProgress(progress);
+    if (this.getStatus() === StatusTime.Running) {
+      refTime.pause();
+      refBeat.pause();
+      refTime.resume();
+      refBeat.resume();
+    }
+  }
+  public getStatus(): StatusTime {
+    const refTime = this.refTime.current!;
+    const refBeat = this.refBeat.current!;
+    /* istanbul ignore if */
+    if (refBeat.getStatusIncrement() !== StatusIncrement.NeverIncrement && refTime.getStatus() !== refBeat.getStatusIncrement()) {
+      throw new Error(`Status between Time and Beat mismatches. Time=${refTime.getStatus()}, Beat=${refBeat.getStatusIncrement()}`);
+    }
+    return refTime.getStatus();
   }
   /* istanbul ignore next */
   public init(newProps: IProps): void {

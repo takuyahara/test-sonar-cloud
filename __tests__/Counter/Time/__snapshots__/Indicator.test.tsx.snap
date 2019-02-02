@@ -1,0 +1,503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indicator with post process clicks 1 time 1`] = `
+<Indicator
+  postProcess={
+    Object {
+      "onCount": [Function],
+      "onCountComplete": [Function],
+      "onCountPause": [Function],
+      "onCountResume": [Function],
+      "onCountStart": [Function],
+      "onCountStop": [Function],
+    }
+  }
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        11:15
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator with post process clicks 2 times 1`] = `
+<Indicator
+  postProcess={
+    Object {
+      "onCount": [Function],
+      "onCountComplete": [Function],
+      "onCountPause": [Function],
+      "onCountResume": [Function],
+      "onCountStart": [Function],
+      "onCountStop": [Function],
+    }
+  }
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        11:15
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator with post process clicks 3 times 1`] = `
+<Indicator
+  postProcess={
+    Object {
+      "onCount": [Function],
+      "onCountComplete": [Function],
+      "onCountPause": [Function],
+      "onCountResume": [Function],
+      "onCountStart": [Function],
+      "onCountStop": [Function],
+    }
+  }
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        07:30
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator with post process clicks and completes 1`] = `
+<Indicator
+  postProcess={
+    Object {
+      "onCount": [Function],
+      "onCountComplete": [Function],
+      "onCountPause": [Function],
+      "onCountResume": [Function],
+      "onCountStart": [Function],
+      "onCountStop": [Function],
+    }
+  }
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        15:00
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator without post process MouseEvent clicks 1 time 1`] = `
+<Indicator
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        11:15
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator without post process MouseEvent clicks 2 times 1`] = `
+<Indicator
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        11:15
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator without post process MouseEvent clicks 3 times 1`] = `
+<Indicator
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        07:30
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator without post process MouseEvent clicks and completes 1`] = `
+<Indicator
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        15:00
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator without post process calls control function 1`] = `
+<Indicator
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        15:00
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator without post process changes progress 1`] = `
+<Indicator
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        11:15
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;
+
+exports[`Indicator without post process toggles 1`] = `
+<Indicator
+  timeToCount={900}
+>
+  <Remaining
+    postProcess={
+      Object {
+        "onClick": [Function],
+        "onTouchEnd": [Function],
+      }
+    }
+    timeToCount={900}
+  >
+    <div
+      className="indicator"
+      data-testid="indicator-remaining"
+      onClick={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="remaining"
+      >
+        15:00
+      </div>
+    </div>
+  </Remaining>
+  <Timer
+    postProcess={
+      Object {
+        "onCount": [Function],
+        "onCountComplete": [Function],
+        "onCountPause": [Function],
+        "onCountResume": [Function],
+        "onCountStart": [Function],
+        "onCountStop": [Function],
+      }
+    }
+    timeToCount={900}
+  />
+</Indicator>
+`;

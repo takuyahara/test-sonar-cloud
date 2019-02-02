@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const config = require('config');
 const { BugsnagBuildReporterPlugin, BugsnagSourceMapUploaderPlugin } = require('webpack-bugsnag-plugins');
 const bsConfig = config.get(`Bugsnag`);
+const appVersion = require("./package.json").version;
 
 exports.onCreateWebpackConfig = ({ stage, actions }) => {
   const webpackConfig = {
@@ -30,11 +31,11 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
     webpackConfig.plugins.push(
       new BugsnagBuildReporterPlugin({
         apiKey: bsConfig.API,
-        appVersion: process.env.npm_package_version,
+        appVersion: appVersion,
       }),
       new BugsnagSourceMapUploaderPlugin({
         apiKey: bsConfig.API,
-        appVersion: process.env.npm_package_version,
+        appVersion: appVersion,
         overwrite: true
       }),
     )

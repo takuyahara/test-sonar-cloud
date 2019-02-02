@@ -1,6 +1,6 @@
-enum State {
+enum Status {
   Running = "Running",
   Stopped = "Stopped",
   Paused = "Paused",
 }
-export default State;
+export default Status;

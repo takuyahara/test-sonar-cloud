@@ -112,7 +112,8 @@ class TempoSelector extends Component<IProps, IState> {
     this.defaultTempo = props.defaultTempo;
     this.range = props.range;
     this.maxDelta = props.maxDelta;
-    this.isDescEnabled = props.isDescEnabled !== undefined ? props.isDescEnabled : false;
+    const oldIsDescEnabled = this.isDescEnabled;
+    this.isDescEnabled = props.isDescEnabled !== undefined ? props.isDescEnabled : oldIsDescEnabled;
 
     const refTempoFrom = this.refTempoFrom.current!;
     const refTempoTo = this.refTempoTo.current!;

@@ -5,7 +5,9 @@
             "type": "node",
             "request": "launch",
             "name": "test",
-            "program": "${workspaceRoot}/scripts/test.js",
+            "program": "${workspaceRoot}/node_modules/.bin/jest",
+            "protocol": "inspector",
+            "args": [ "--runInBand" ]
         },
         {
             "type": "chrome",

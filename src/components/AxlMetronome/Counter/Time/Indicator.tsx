@@ -128,9 +128,9 @@ class Indicator extends Component<IProps, IState> {
     const timer = this.refTimer.current!;
     return timer.getProgress();
   }
-  public getState(): Status {
+  public getStatus(): Status {
     const timer = this.refTimer.current!;
-    return timer.getState();
+    return timer.getStatus();
   }
   /* istanbul ignore next */
   public init(newProps: IProps): void {

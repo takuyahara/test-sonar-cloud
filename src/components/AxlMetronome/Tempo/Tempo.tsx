@@ -149,7 +149,8 @@ class Tempo extends Component<IProps, IState> {
     this.isTapped = false;
     this.distFrom = 0;
     this.tempoPrev = props.tempo;
-    this.postChangeTempo = props.onChangeTempo !== undefined  ? props.onChangeTempo : () => {};
+    const oldPostChangeTempo = this.postChangeTempo;
+    this.postChangeTempo = props.onChangeTempo !== undefined ? props.onChangeTempo : oldPostChangeTempo;
   }
   /* istanbul ignore next */
   public componentWillMount(): void {

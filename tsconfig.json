@@ -28,15 +28,7 @@
       ],
       "AxlMetronome/*": [
         "src/components/AxlMetronome/*"
-      ],
-      "*": [
-        "*",
-        "src/components/*"
       ]
     }
-  },
-  "include": [
-    "src",
-    "stories"
-  ]
+  }
 }

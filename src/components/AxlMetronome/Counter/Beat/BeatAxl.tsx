@@ -2,7 +2,7 @@ import React, { createRef, RefObject } from 'react';
 import _ from 'lodash';
 // import style from './BeatAxl.module.scss';
 import Beat from './Beat';
-import Status from './Status';
+import StatusBase from './Status';
 import Utils, { ICssSelector } from 'utils/Utils';
 const style = {};
 
@@ -27,12 +27,19 @@ interface ITempo {
   from: number;
   to: number;
 }
+enum StatusExtend {
+  NeverIncrement = "NeverIncrement",
+}
+export type StatusIncrement = StatusBase | StatusExtend;
+export const StatusIncrement = { ...StatusBase, ...StatusExtend };
+export type StatusBeat = StatusBase;
+export const StatusBeat = StatusBase;
 class BeatAxl extends React.Component<IProps, IState> {
   // Initialize in init()
   private refBeat!: RefObject<Beat>;
   private timerId!: NodeJS.Timer | number;
+  private incrementStatus: StatusIncrement;
   private tempo: ITempo;
-  private tempoDiff: number;
   private remaining: number;
   private interval: number;
   private cntAcceleration!: number;
@@ -73,12 +80,11 @@ class BeatAxl extends React.Component<IProps, IState> {
     this.onComplete = this.onComplete.bind(this);
 
     // Local variable
-    const tempoDiff = props.tempo.to - props.tempo.from;
     this.tempo = props.tempo;
-    this.tempoDiff = tempoDiff;
     this.remaining = props.remaining;
     this.cntAcceleration = this.getCntAcceleration(0.0);
     this.interval = this.getInterval(0.0);
+    this.incrementStatus = this.isTempoStable() ? StatusIncrement.NeverIncrement : StatusIncrement.Stopped;
   }
   private accelerate(): void {
     // Stop when tempo has reached to `this.props.tempo.to`
@@ -90,32 +96,45 @@ class BeatAxl extends React.Component<IProps, IState> {
     // Increment
     const refBeat = this.refBeat.current!;
     const currentTempo = refBeat.getTempo();
-    if (this.props.tempo.to > this.props.tempo.from) {
+    if (this.tempo.to > this.tempo.from) {
       refBeat.setTempo(currentTempo + 1);
-    } else if (this.props.tempo.to < this.props.tempo.from) {
+    } else if (this.tempo.to < this.tempo.from) {
       refBeat.setTempo(currentTempo - 1);
     }
     this.cntAcceleration--;
     this.onAccelerate();
   }
+  private isTempoStable(): boolean {
+    const tempoRange = this.tempo;
+    const tempoDiff = tempoRange.to - tempoRange.from;
+    return tempoDiff === 0;
+  }
   private getCntAcceleration(progress: number): number {
-    const tempoDiffAbs = Math.abs(this.tempoDiff);
-    const isTempoStable = tempoDiffAbs === 0;
+    const tempoRange = this.tempo;
+    const tempoDiff = tempoRange.to - tempoRange.from;
+    const tempoDiffAbs = Math.abs(tempoDiff);
+    const tempoCurrent = tempoRange.from + Math.round(tempoDiff * progress);
     const remaining = Math.round(this.props.remaining * Utils.safeSubtraction(1, progress));
     const remainingFixed = remaining + 1;
     const cntAccelerationStable = remainingFixed;
-    const cntAccelerationUnstable = Math.round(tempoDiffAbs * Utils.safeSubtraction(1, progress));
-    return isTempoStable ? cntAccelerationStable : cntAccelerationUnstable;
+    const cntAccelerationUnstable = Math.abs(tempoRange.to - tempoCurrent);
+    // console.log(cntAccelerationStable);
+    return this.isTempoStable() ? cntAccelerationStable : cntAccelerationUnstable;
   }
   private getInterval(progress: number): number {
-    const tempoDiffAbs = Math.abs(this.tempoDiff);
-    const isTempoStable = tempoDiffAbs === 0;
+    const tempoRange = this.tempo;
+    const tempoDiff = tempoRange.to - tempoRange.from;
+    const tempoDiffAbs = Math.abs(tempoDiff);
+    // const tempoCurrent = tempoRange.from + Math.round(tempoDiff * progress);
+    // const isTempoStable = tempoDiff === 0;
     const remaining = Math.round(this.remaining * Utils.safeSubtraction(1, progress));
     const remainingFixed = remaining + 1;
     const tempoDiffFixed = tempoDiffAbs - Math.round(tempoDiffAbs * progress) + 1;
-    const intervalStable = (remainingFixed / (this.cntAcceleration + 1)) * 1000;
-    const intervalUnstable = (remainingFixed / tempoDiffFixed) * 1000;
-    return isTempoStable ? intervalStable : intervalUnstable;
+    // const intervalStable = (remainingFixed / (this.cntAcceleration + 1)) * 1000;
+    // const intervalUnstable = (remainingFixed / tempoDiffFixed) * 1000;
+    // return isTempoStable ? intervalStable : intervalUnstable;
+    // console.log(remainingFixed / tempoDiffFixed * 1000);
+    return remainingFixed / tempoDiffFixed * 1000;
   }
   private onAccelerate(): void {
     this.postAccelerate();
@@ -146,43 +165,66 @@ class BeatAxl extends React.Component<IProps, IState> {
     this.postComplete();
   }
   public start(): void {
-    this.timerId = setInterval(this.accelerate, this.interval);
+    if (this.isTempoStable()) {
+      this.timerId = setInterval(this.onComplete, this.remaining * 1000);
+      this.incrementStatus = StatusIncrement.NeverIncrement;
+    } else {
+      this.timerId = setInterval(this.accelerate, this.interval);
+      this.incrementStatus = StatusIncrement.Running;
+    }
   }
   public stop(): void {
     clearInterval(this.timerId as number);
     this.setProgress(0.0);
+    if (!this.isTempoStable()) {
+      this.incrementStatus = StatusIncrement.Stopped;
+    }
   }
   public pause(): void {
     clearInterval(this.timerId as number);
+    if (!this.isTempoStable()) {
+      this.incrementStatus = StatusIncrement.Paused;
+    }
   }
   public resume(): void {
-    this.timerId = setInterval(this.accelerate, this.interval);
+    if (this.isTempoStable()) {
+      const remaining = this.remaining;
+      this.timerId = setInterval(this.onComplete, remaining * 1000);
+      this.incrementStatus = StatusIncrement.NeverIncrement;
+    } else {
+      this.timerId = setInterval(this.accelerate, this.interval);
+      this.incrementStatus = StatusIncrement.Running;
+    }
   }
   public setProgress(progress: number): void {
     const tempo = this.tempo;
-    const tempoDiff = this.tempoDiff;
+    const tempoDiff = tempo.to - tempo.from;
     const refBeat = this.refBeat.current!;
     const newTempo = tempo.from + Math.round(tempoDiff * progress);
     refBeat.setTempo(newTempo);
     this.cntAcceleration = this.getCntAcceleration(progress);
     this.interval = this.getInterval(progress);
   }
-  public setTempo(newTempo: number): void {
-    const refBeat = this.refBeat.current!;
-    return refBeat.setTempo(newTempo);
+  public setTempoRange(newTempo: ITempo): void {
+    this.tempo = newTempo;
+    if (this.isTempoStable()) {
+      this.incrementStatus = StatusIncrement.NeverIncrement;
+    }
   }
   public getTempo(): number {
     const refBeat = this.refBeat.current!;
     return refBeat.getTempo();
   }
-  public getState(): Status {
+  public getStatusBeat(): StatusBeat {
     const refBeat = this.refBeat.current!;
-    return refBeat.getState();
+    return refBeat.getStatus();
+  }
+  public getStatusIncrement(): StatusIncrement {
+    return this.incrementStatus;
   }
   /* istanbul ignore next */
   public init(newProps: IProps): void {
     this.tempo = newProps.tempo;
-    this.tempoDiff = newProps.tempo.to - newProps.tempo.from;
     this.remaining = newProps.remaining;
 
     clearInterval(this.timerId as number);
@@ -211,7 +253,6 @@ class BeatAxl extends React.Component<IProps, IState> {
       return;
     }
     this.tempo = nextProps.tempo;
-    this.tempoDiff = nextProps.tempo.to - nextProps.tempo.from;
     this.init(nextProps);
   }
   public render(): React.ReactNode {

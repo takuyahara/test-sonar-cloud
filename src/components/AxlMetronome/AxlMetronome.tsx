@@ -65,7 +65,7 @@ class AxlMetronome extends Component<IProps, IState> {
   }
   private onChangeTempo(newTempo: ITempo): void {
     const refCounter = this.refCounter.current!;
-    refCounter.setTempo(newTempo.from);
+    refCounter.setTempo(newTempo);
   }
   /* istanbul ignore next */
   private reload(newConfig: IConfig): void {
@@ -90,9 +90,9 @@ class AxlMetronome extends Component<IProps, IState> {
       },
     });
   }
-  public getState(): Status {
+  public getStatus(): Status {
     const refCounter = this.refCounter.current!;
-    return refCounter.getState();
+    return refCounter.getStatus();
   }
   public init(newProps: IProps): void {
     const refTempoSelector = this.refTempoSelector.current!;
