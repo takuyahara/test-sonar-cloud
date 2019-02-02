@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RingStepped change value by MouseEvent mouseDown => mouseMove => mouseUp 1`] = `
+<RingStepped
+  step={5}
+>
+  <div
+    className="ring"
+  >
+    <svg>
+      <defs>
+        <radialGradient
+          gradientUnits="userSpaceOnUse"
+          id="maskGradient"
+          spreadMethod="reflect"
+        >
+          <stop
+            offset="30%"
+          />
+          <stop
+            offset="100%"
+          />
+        </radialGradient>
+      </defs>
+      <circle
+        className="remaining"
+      />
+      <circle
+        className="mask"
+        stroke="url(#maskGradient)"
+        strokeDasharray="182.212373908208 911.06186954104"
+      />
+      <circle
+        className="tapArea"
+        data-testid="ring-taparea"
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      />
+      <circle
+        className="tapAreaMask"
+      />
+    </svg>
+    <div
+      className="globalTapArea"
+      data-is-bubbled={false}
+      data-testid="ring-global-taparea"
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+    />
+  </div>
+</RingStepped>
+`;
+
+exports[`RingStepped change value by MouseEvent mouseDown => mouseMove 1`] = `
+<RingStepped
+  step={5}
+>
+  <div
+    className="ring"
+  >
+    <svg>
+      <defs>
+        <radialGradient
+          gradientUnits="userSpaceOnUse"
+          id="maskGradient"
+          spreadMethod="reflect"
+        >
+          <stop
+            offset="30%"
+          />
+          <stop
+            offset="100%"
+          />
+        </radialGradient>
+      </defs>
+      <circle
+        className="remaining"
+      />
+      <circle
+        className="mask"
+        stroke="url(#maskGradient)"
+        strokeDasharray="182.212373908208 911.06186954104"
+      />
+      <circle
+        className="tapArea"
+        data-testid="ring-taparea"
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      />
+      <circle
+        className="tapAreaMask"
+      />
+    </svg>
+    <div
+      className="globalTapArea"
+      data-is-bubbled={true}
+      data-testid="ring-global-taparea"
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+    />
+  </div>
+</RingStepped>
+`;
+
+exports[`RingStepped change value by MouseEvent mouseDown 1`] = `
+<RingStepped
+  step={5}
+>
+  <div
+    className="ring"
+  >
+    <svg>
+      <defs>
+        <radialGradient
+          gradientUnits="userSpaceOnUse"
+          id="maskGradient"
+          spreadMethod="reflect"
+        >
+          <stop
+            offset="30%"
+          />
+          <stop
+            offset="100%"
+          />
+        </radialGradient>
+      </defs>
+      <circle
+        className="remaining"
+      />
+      <circle
+        className="mask"
+        stroke="url(#maskGradient)"
+        strokeDasharray="364.424747816416 911.06186954104"
+      />
+      <circle
+        className="tapArea"
+        data-testid="ring-taparea"
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      />
+      <circle
+        className="tapAreaMask"
+      />
+    </svg>
+    <div
+      className="globalTapArea"
+      data-is-bubbled={true}
+      data-testid="ring-global-taparea"
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+    />
+  </div>
+</RingStepped>
+`;
+
+exports[`RingStepped change value by MouseEvent mouseMove 1`] = `
+<RingStepped
+  step={5}
+>
+  <div
+    className="ring"
+  >
+    <svg>
+      <defs>
+        <radialGradient
+          gradientUnits="userSpaceOnUse"
+          id="maskGradient"
+          spreadMethod="reflect"
+        >
+          <stop
+            offset="30%"
+          />
+          <stop
+            offset="100%"
+          />
+        </radialGradient>
+      </defs>
+      <circle
+        className="remaining"
+      />
+      <circle
+        className="mask"
+        stroke="url(#maskGradient)"
+        strokeDasharray="0 911.06186954104"
+      />
+      <circle
+        className="tapArea"
+        data-testid="ring-taparea"
+        onMouseDown={[Function]}
+        onTouchStart={[Function]}
+      />
+      <circle
+        className="tapAreaMask"
+      />
+    </svg>
+    <div
+      className="globalTapArea"
+      data-is-bubbled={false}
+      data-testid="ring-global-taparea"
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+    />
+  </div>
+</RingStepped>
+`;

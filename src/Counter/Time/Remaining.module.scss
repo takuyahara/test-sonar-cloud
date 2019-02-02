@@ -1,0 +1,29 @@
+@mixin centralize {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.indicator {
+    width: 140px;
+    height: 140px;
+    @include centralize;
+    border: 6px solid orange;
+    border-radius: 50%;
+    background: rgb(60, 60, 60);
+    background: -moz-radial-gradient(center, ellipse farthest-corner, rgb(60, 60, 60) 0%, rgb(0, 0, 0) 100%);
+    background: -webkit-radial-gradient(center, ellipse farthest-corner, rgb(60, 60, 60) 0%, rgb(0, 0, 0) 100%);
+    background: radial-gradient(ellipse at center, rgb(60, 60, 60) 0%, rgb(0, 0, 0) 100%);
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.remaining {
+    @include centralize;
+    color: orange;
+    font-size: 40px;
+    font-family: "DIN Alternate";
+}

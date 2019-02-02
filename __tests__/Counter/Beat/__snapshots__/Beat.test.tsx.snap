@@ -1,0 +1,673 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Beat General returns interval from tempo 1`] = `
+<Beat
+  tempo={120}
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 1 time / invokes onStart() 1`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 1 time / invokes onStart() 2`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 1 time and stop (intend to be called from parent) / invokes onStop() 1`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 1 time and stop (intend to be called from parent) / invokes onStop() 2`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 2 times / invokes onPause() 1`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 2 times / invokes onPause() 2`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 3 times / invokes onResume() 1`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with post process Mouseevent click 3 times / invokes onResume() 2`] = `
+<Beat
+  postProcess={
+    Object {
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange specify / from < to verify tempo / tempo < 100 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 100,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange specify / from < to verify tempo / tempo > 200 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 100,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange specify / from === to verify tempo / tempo < 120 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 120,
+      "to": 120,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange specify / from === to verify tempo / tempo > 120 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 120,
+      "to": 120,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange specify / from > to verify tempo / tempo < 100 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 200,
+      "to": 100,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange specify / from > to verify tempo / tempo > 200 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 200,
+      "to": 100,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange use default verify tempo / tempo < 1 1`] = `
+<Beat
+  tempo={120}
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange use default verify tempo / tempo > 999 1`] = `
+<Beat
+  tempo={120}
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat with tempoRange verify tempo / Math.floor(tempo) 1`] = `
+<Beat
+  tempo={120}
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      180
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 1 time 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 1 time 2`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 1 time and stop (intend to be called from parent) 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 1 time and stop (intend to be called from parent) 2`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 2 times 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 2 times 2`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 3 times 1`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;
+
+exports[`Beat without post process Mouseevent click 3 times 2`] = `
+<Beat
+  tempo={120}
+  tempoRange={
+    Object {
+      "from": 1,
+      "to": 999,
+    }
+  }
+>
+  <div
+    className="tempo"
+  >
+    <div
+      className="tapArea"
+      data-testid="beat-taparea"
+      onClick={[Function]}
+    >
+      120
+    </div>
+  </div>
+</Beat>
+`;

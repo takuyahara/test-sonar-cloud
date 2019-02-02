@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "test",
+            "program": "${workspaceRoot}/scripts/test.js",
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch debugger",
+            "url": "http://localhost:3000",
+            "port": 9222,
+            "webRoot": "${workspaceFoler}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch debugger for Storybook",
+            "url": "http://localhost:6006",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}

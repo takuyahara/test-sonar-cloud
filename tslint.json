@@ -1,0 +1,83 @@
+{
+  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "src/serviceWorker.ts",
+      "src/react-app-env.d.ts",
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "node_modules_patch/**/*.ts",
+      "coverage/lcov-report/*.js",
+      ".storybook/**/*.js",
+      "./*.js"
+    ]
+  },
+  "rules": {
+    "object-literal-sort-keys" : false,
+    "member-access": [
+      true,
+      "check-accessor",
+      "check-constructor",
+      "check-parameter-property"
+    ],
+    "no-console": false,
+    "no-empty-interface": false,
+    "no-unused-expression": {
+      "severity": "error",
+      "options": ["allow-fast-null-checks"]
+    },
+    "no-unused-variable": {
+      "severity": "warn"
+    },
+    "radix": false,
+    "no-any": true,
+    "no-empty": false,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          "private-static-field", "public-static-field",
+          "private-instance-field", "public-instance-field",
+          "private-constructor", "public-constructor",
+          "private-instance-method", "public-instance-method"
+        ]
+      }
+    ],
+    "variable-name": [true, "check-format", "allow-leading-underscore"],
+    "ordered-imports": false,
+    "typedef": [
+      true,
+      "call-signature",
+      "member-variable-declaration",
+      "parameter",
+      "property-declaration"
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "trailing-comma": [
+      true, 
+      {
+        "multiline": "always", 
+        "singleline": "never"
+      }
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-typecast",
+      "check-type-operator",
+      "check-preblock"
+    ]
+  },
+  "jsRules": {
+
+  }
+}

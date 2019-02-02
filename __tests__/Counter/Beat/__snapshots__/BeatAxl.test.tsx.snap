@@ -1,0 +1,1233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Beat General set/get tempo 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        105
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo decreases Mouseevent click 1 time / Running 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        147
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo decreases Mouseevent click 2 times / Paused 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        147
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo decreases Mouseevent click 3 times / Running 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        143
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo decreases Mouseevent click and finish 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        150
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo doesn't change Mouseevent click 1 time / Running 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo doesn't change Mouseevent click 2 times / Paused 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo doesn't change Mouseevent click 3 times / Running 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo doesn't change Mouseevent click and finish 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo increases Mouseevent click 1 time / Running 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        93
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo increases Mouseevent click 2 times / Paused 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        93
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo increases Mouseevent click 3 times / Running 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        97
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat with post process Tempo increases Mouseevent click and finish 1`] = `
+<BeatAxl
+  postProcess={
+    Object {
+      "onAccelerate": [Function],
+      "onComplete": [Function],
+      "onPause": [Function],
+      "onResume": [Function],
+      "onStart": [Function],
+      "onStop": [Function],
+      "onTick": [Function],
+    }
+  }
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo decreases Mouseevent click 1 time / Running 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        147
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo decreases Mouseevent click 2 times / Paused 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        147
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo decreases Mouseevent click 3 times / Running 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        143
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo decreases Mouseevent click and finish 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 150,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={150}
+    tempoRange={
+      Object {
+        "from": 150,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        150
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo doesn't change Mouseevent click 1 time / Running 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo doesn't change Mouseevent click 2 times / Paused 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo doesn't change Mouseevent click 3 times / Running 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo doesn't change Mouseevent click and finish 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 90,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 90,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo increases Mouseevent click 1 time / Running 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        93
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo increases Mouseevent click 2 times / Paused 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        93
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo increases Mouseevent click 3 times / Running 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        97
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
+
+exports[`Beat without post process Tempo increases Mouseevent click and finish 1`] = `
+<BeatAxl
+  remaining={30}
+  tempo={
+    Object {
+      "from": 90,
+      "to": 150,
+    }
+  }
+>
+  <Beat
+    inheritedSelector={Object {}}
+    postProcess={
+      Object {
+        "onPause": [Function],
+        "onResume": [Function],
+        "onStart": [Function],
+        "onStop": [Function],
+        "onTick": [Function],
+      }
+    }
+    tempo={90}
+    tempoRange={
+      Object {
+        "from": 90,
+        "to": 150,
+      }
+    }
+  >
+    <div
+      className="tempo"
+    >
+      <div
+        className="tapArea"
+        data-testid="beat-taparea"
+        onClick={[Function]}
+      >
+        90
+      </div>
+    </div>
+  </Beat>
+</BeatAxl>
+`;
