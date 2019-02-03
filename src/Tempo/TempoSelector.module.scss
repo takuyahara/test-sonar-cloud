@@ -1,0 +1,19 @@
+.tempoSelector {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (orientation: portrait) {
+    .from,
+    .to {
+        width: 100%;
+        height: 50%;
+    }
+}
+@media screen and (orientation: landscape) {
+    .from,
+    .to {
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+}

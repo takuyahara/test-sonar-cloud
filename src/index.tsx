@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.module.scss';
 import App from './App';
+import './index.module.scss';
 import * as serviceWorker from './serviceWorker';
+import bugsnag from '@bugsnag/js';
+import bugsnagReact from '@bugsnag/plugin-react';
 
 ReactDOM.render(
   <App />,

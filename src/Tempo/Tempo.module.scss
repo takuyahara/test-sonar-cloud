@@ -1,0 +1,45 @@
+@mixin common-style {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: 60px;
+    font-family: "DIN Alternate";
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+@media screen and (orientation: portrait) {
+    .from {
+        @include common-style;
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: -webkit-linear-gradient(top, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+    }
+    .to {
+        @include common-style;
+        background: rgb(40, 40, 40);
+        background: -moz-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: -webkit-linear-gradient(bottom, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: linear-gradient(to top, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+    }
+}
+@media screen and (orientation: landscape) {
+    .from {
+        @include common-style;
+        background: rgb(0, 0, 0);
+        background: -moz-linear-gradient(left, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: -webkit-linear-gradient(left, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+    }
+    .to {
+        @include common-style;
+        background: rgb(40, 40, 40);
+        background: -moz-linear-gradient(right, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: -webkit-linear-gradient(right, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+        background: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(40, 40, 40) 100%);
+    }
+}

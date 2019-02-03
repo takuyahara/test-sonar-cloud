@@ -1,0 +1,1921 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`isDescEnabled = false MouseEvent .from 90 => 150, .to 150 => 140 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          140
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          140
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false MouseEvent \`from\` > \`to\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false MouseEvent \`to\` < \`from\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          70
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          70
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false MouseEvent normal 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          110
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false MouseEvent toggleTempoChange => .from MouseEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false MouseEvent toggleTempoChange => .to MouseEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false TouchEvent \`from\` > \`to\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false TouchEvent \`to\` < \`from\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          70
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          70
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false TouchEvent normal 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          110
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false TouchEvent toggleTempoChange => .from TouchEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false TouchEvent toggleTempoChange => .to TouchEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = false returns default tempo 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true MouseEvent \`from\` > \`to\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true MouseEvent \`to\` < \`from\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          70
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true MouseEvent normal 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true MouseEvent toggleTempoChange => .from MouseEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true MouseEvent toggleTempoChange => .to MouseEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true TouchEvent \`from\` > \`to\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true TouchEvent \`to\` < \`from\` 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          70
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true TouchEvent normal 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          130
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true TouchEvent toggleTempoChange => .from TouchEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true TouchEvent toggleTempoChange => .to TouchEvent 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;
+
+exports[`isDescEnabled = true returns default tempo 1`] = `
+<TempoSelector
+  defaultTempo={
+    Object {
+      "from": 90,
+      "to": 120,
+    }
+  }
+  isDescEnabled={true}
+  maxDelta={100}
+  range={
+    Object {
+      "from": 50,
+      "to": 200,
+    }
+  }
+>
+  <div
+    className="tempoSelector"
+  >
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="from"
+      tempo={90}
+    >
+      <div
+        className="from"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          90
+        </span>
+      </div>
+    </Tempo>
+    <Tempo
+      inheritedSelector={null}
+      isHandlerEnabled={true}
+      maxDelta={100}
+      onChangeTempo={[Function]}
+      range={
+        Object {
+          "from": 50,
+          "to": 200,
+        }
+      }
+      role="to"
+      tempo={120}
+    >
+      <div
+        className="to"
+        onMouseDown={[Function]}
+        onMouseMove={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+      >
+        <span
+          className="tempoValue"
+        >
+          120
+        </span>
+      </div>
+    </Tempo>
+  </div>
+</TempoSelector>
+`;

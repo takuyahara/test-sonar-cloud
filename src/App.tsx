@@ -12,7 +12,7 @@ interface IState {
 
 class App extends Component<IProps, IState> {
   // Initialize in init()
-  // empty
+  private isDescEnabled!: boolean;
 
   // Ref
   // empty
