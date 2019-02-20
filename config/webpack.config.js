@@ -25,6 +25,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt')
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 const { BugsnagBuildReporterPlugin, BugsnagSourceMapUploaderPlugin } = require('webpack-bugsnag-plugins');
 const Dotenv = require('dotenv-webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
@@ -599,6 +600,10 @@ module.exports = function(webpackEnv) {
           apiKey: process.env.BS_API,
           appVersion: process.env.npm_package_version,
           overwrite: true
+        }),
+        new BundleAnalyzerPlugin({
+          analyzerMode: isEnvProduction ? "static" : "server",
+          openAnalyzer: false,
         }),
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.

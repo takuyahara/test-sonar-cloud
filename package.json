@@ -69,7 +69,8 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "yarn build-only && bundlesize",
+    "build-only": "node scripts/build.js",
     "test": "yarn test-unwatch --watchAll",
     "test-unwatch": "env-cmd .env jest --forceExit --detectOpenHandles",
     "patch": "ls node_modules_patch/ | awk '{system(\"cp -rp node_modules_patch/\"$1\" node_modules\")}'",
@@ -80,8 +81,27 @@
     "tslint": "tslint -p tsconfig.json",
     "stylelint": "stylelint 'src/**/*.scss'",
     "lint-staged": "lint-staged",
-    "pre-commit": "yarn lint-staged && yarn test-unwatch"
+    "pre-commit": "yarn lint-staged && yarn test-unwatch",
+    "bundlesize": "yarn build"
   },
+  "bundlesize": [
+    {
+      "path": "./build/static/css/main.*.chunk.css",
+      "maxSize": "1.5 kB"
+    },
+    {
+      "path": "./build/static/js/2.*.chunk.js",
+      "maxSize": "300 kB"
+    },
+    {
+      "path": "./build/static/js/main.*.chunk.js",
+      "maxSize": "8.0 kB"
+    },
+    {
+      "path": "./build/static/js/runtime~main.*.js",
+      "maxSize": "1.0 kB"
+    }
+  ],
   "husky": {
     "hooks": {
       "pre-commit": "yarn pre-commit"
@@ -175,6 +195,7 @@
     "@types/storybook__addon-notes": "^4.0.1",
     "@types/storybook__react": "^4.0.0",
     "babel-plugin-react-remove-properties": "^0.3.0",
+    "bundlesize": "^0.17.1",
     "env-cmd": "^8.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
@@ -187,6 +208,7 @@
     "stylelint-config-standard": "^18.2.0",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
-    "tslint-react": "^3.6.0"
+    "tslint-react": "^3.6.0",
+    "webpack-bundle-analyzer": "^3.0.4"
   }
 }
