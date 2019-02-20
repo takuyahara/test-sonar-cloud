@@ -1,0 +1,21 @@
+@import "./mixins";
+.AxlMetronome {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (orientation: portrait) {
+    .tempoSelector .from > span {
+        margin-top: -$counter-center-y;
+    }
+    .tempoSelector .to > span {
+        margin-top: $counter-center-y;
+    }
+}
+@media screen and (orientation: landscape) {
+    .tempoSelector .from > span {
+        margin-left: -$counter-center-x;
+    }
+    .tempoSelector .to > span {
+        margin-left: $counter-center-x;
+    }
+}

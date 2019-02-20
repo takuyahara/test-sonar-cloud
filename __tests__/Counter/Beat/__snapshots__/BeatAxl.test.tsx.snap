@@ -22,12 +22,6 @@ exports[`Beat General set/get tempo 1`] = `
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -77,12 +71,6 @@ exports[`Beat with post process Tempo decreases Mouseevent click 1 time / Runnin
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -132,12 +120,6 @@ exports[`Beat with post process Tempo decreases Mouseevent click 2 times / Pause
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -187,12 +169,6 @@ exports[`Beat with post process Tempo decreases Mouseevent click 3 times / Runni
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -242,12 +218,6 @@ exports[`Beat with post process Tempo decreases Mouseevent click and finish 1`] 
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -297,12 +267,6 @@ exports[`Beat with post process Tempo doesn't change Mouseevent click 1 time / R
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -352,12 +316,6 @@ exports[`Beat with post process Tempo doesn't change Mouseevent click 2 times / 
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -407,12 +365,6 @@ exports[`Beat with post process Tempo doesn't change Mouseevent click 3 times / 
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -462,12 +414,6 @@ exports[`Beat with post process Tempo doesn't change Mouseevent click and finish
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -517,12 +463,6 @@ exports[`Beat with post process Tempo increases Mouseevent click 1 time / Runnin
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -572,12 +512,6 @@ exports[`Beat with post process Tempo increases Mouseevent click 2 times / Pause
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -627,12 +561,6 @@ exports[`Beat with post process Tempo increases Mouseevent click 3 times / Runni
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -682,12 +610,6 @@ exports[`Beat with post process Tempo increases Mouseevent click and finish 1`] 
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -726,12 +648,6 @@ exports[`Beat without post process Tempo decreases Mouseevent click 1 time / Run
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -770,12 +686,6 @@ exports[`Beat without post process Tempo decreases Mouseevent click 2 times / Pa
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -814,12 +724,6 @@ exports[`Beat without post process Tempo decreases Mouseevent click 3 times / Ru
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -858,12 +762,6 @@ exports[`Beat without post process Tempo decreases Mouseevent click and finish 1
       }
     }
     tempo={150}
-    tempoRange={
-      Object {
-        "from": 150,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -902,12 +800,6 @@ exports[`Beat without post process Tempo doesn't change Mouseevent click 1 time 
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -946,12 +838,6 @@ exports[`Beat without post process Tempo doesn't change Mouseevent click 2 times
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -990,12 +876,6 @@ exports[`Beat without post process Tempo doesn't change Mouseevent click 3 times
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -1034,12 +914,6 @@ exports[`Beat without post process Tempo doesn't change Mouseevent click and fin
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 90,
-      }
-    }
   >
     <div
       className="tempo"
@@ -1078,12 +952,6 @@ exports[`Beat without post process Tempo increases Mouseevent click 1 time / Run
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -1122,12 +990,6 @@ exports[`Beat without post process Tempo increases Mouseevent click 2 times / Pa
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -1166,12 +1028,6 @@ exports[`Beat without post process Tempo increases Mouseevent click 3 times / Ru
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"
@@ -1210,12 +1066,6 @@ exports[`Beat without post process Tempo increases Mouseevent click and finish 1
       }
     }
     tempo={90}
-    tempoRange={
-      Object {
-        "from": 90,
-        "to": 150,
-      }
-    }
   >
     <div
       className="tempo"

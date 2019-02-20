@@ -11,6 +11,7 @@ interface ISpy {
 }
 
 configure({ adapter: new Adapter() });
+const sel = (id: string) => `[data-testid="${id}"]`;
 
 let tempo: ReactWrapper;
 let tempoInstance: Tempo;
@@ -54,7 +55,6 @@ describe('Tempo', () => {
             from: 50,
             to: 200,
           }} 
-          isHandlerEnabled={true}
         />);
       tempoInstance = tempo.instance() as Tempo;
     
@@ -62,31 +62,25 @@ describe('Tempo', () => {
       sinon.resetHistory();
     });
 
-    it('returns current tempo', () => {
-      tempo.children('.from').simulate('mousedown', {});
-
-      expect(tempoInstance.tempo).toBe(80);
-    });
-
     it('changes tempo', () => {
+      expect(tempoInstance.getTempo()).toBe(80);
       tempoInstance.changeTempo(150);
-      expect(tempoInstance.tempo).toBe(150);
+      expect(tempoInstance.getTempo()).toBe(150);
     });
 
     it('normalize tempo to min when passed value is less than than min', () => {
       tempoInstance.changeTempo(30);
-      expect(tempoInstance.tempo).toBe(50);
+      expect(tempoInstance.getTempo()).toBe(50);
     });
 
     it('normalize tempo to max when passed value is more than than max', () => {
       tempoInstance.changeTempo(300);
-      expect(tempoInstance.tempo).toBe(200);
+      expect(tempoInstance.getTempo()).toBe(200);
     });
 
     describe('MouseEvent', () => {
       it('mouseMove and nothing happens', () => {
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
+        tempo.find(sel('temposelector-from')).simulate('mousemove', {
           clientX: 300,
           clientY: 0,
         });
@@ -96,8 +90,7 @@ describe('Tempo', () => {
       });
 
       it('mouseDown', () => {
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
+        tempo.find(sel('temposelector-from')).simulate('mousedown', {
           clientX: 100,
           clientY: 0,
         });
@@ -107,13 +100,11 @@ describe('Tempo', () => {
       });
     
       it('mouseDown => mouseMove', () => {
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
+        tempo.find(sel('temposelector-from')).simulate('mousedown', {
           clientX: 100,
           clientY: 0,
         });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
+        tempo.find(sel('temposelector-from')).simulate('mousemove', {
           clientX: 300,
           clientY: 0,
         });
@@ -124,71 +115,23 @@ describe('Tempo', () => {
       });
     
       it('mouseDown => mouseMove => mouseUp', () => {
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
+        tempo.find(sel('temposelector-from')).simulate('mousedown', {
           clientX: 100,
           clientY: 0,
         });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
+        tempo.find(sel('temposelector-from')).simulate('mousemove', {
           clientX: 300,
           clientY: 0,
         });
-        tempo.find('.from').simulate('mouseup', {
-          type: 'mouseup',
-        });
+        tempo.find(sel('temposelector-from')).simulate('mouseup');
 
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-    
-      it('toggleHandler() => mouseDown => mouseMove => mouseUp', () => {
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
-          clientX: 100,
-          clientY: 0,
-        });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
-          clientX: 300,
-          clientY: 0,
-        });
-        tempo.find('.from').simulate('mouseup', {
-          type: 'mouseup',
-        });
-        
-        expect(spy.Tempo.mouseDown.notCalled).toBe(true);
-        expect(spy.Tempo.mouseMove.notCalled).toBe(true);
-        expect(spy.Tempo.mouseUp.notCalled).toBe(true);
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-    
-      it('toggleHandler() * 2 => mouseDown => mouseMove => mouseUp', () => {
-        tempoInstance.toggleHandler();
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
-          clientX: 100,
-          clientY: 0,
-        });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
-          clientX: 300,
-          clientY: 0,
-        });
-        tempo.find('.from').simulate('mouseup', {
-          type: 'mouseup',
-        });
-        
-        expect(tempoInstance.state.tempoCurr).toBe(120);
         expect((tempoInstance as any).isTapped).toBe(false);
       });
     });
 
     describe('TouchEvent', () => {
       it('touchMove and nothing happens', () => {
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
+        tempo.find(sel('temposelector-from')).simulate('touchmove', {
           changedTouches: [
             {
               clientX: 300,
@@ -202,8 +145,7 @@ describe('Tempo', () => {
       });
 
       it('touchStart', () => {
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
+        tempo.find(sel('temposelector-from')).simulate('touchstart', {
           changedTouches: [
             {
               clientX: 100,
@@ -217,8 +159,7 @@ describe('Tempo', () => {
       });
 
       it('touchStart => touchMove', () => {
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
+        tempo.find(sel('temposelector-from')).simulate('touchstart', {
           changedTouches: [
             {
               clientX: 100,
@@ -226,8 +167,7 @@ describe('Tempo', () => {
             },
           ],
         });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
+        tempo.find(sel('temposelector-from')).simulate('touchmove', {
           changedTouches: [
             {
               clientX: 300,
@@ -242,8 +182,7 @@ describe('Tempo', () => {
       });
 
       it('touchStart => touchMove => touchEnd', () => {
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
+        tempo.find(sel('temposelector-from')).simulate('touchstart', {
           changedTouches: [
             {
               clientX: 100,
@@ -251,8 +190,7 @@ describe('Tempo', () => {
             },
           ],
         });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
+        tempo.find(sel('temposelector-from')).simulate('touchmove', {
           changedTouches: [
             {
               clientX: 300,
@@ -260,69 +198,8 @@ describe('Tempo', () => {
             },
           ],
         });
-        tempo.find('.from').simulate('touchend', {
-          type: "touchend",
-        });
+        tempo.find(sel('temposelector-from')).simulate('touchend');
 
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-
-      it('toggleHandler() => touchStart => touchMove => touchEnd', () => {
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
-          changedTouches: [
-            {
-              clientX: 100,
-              clientY: 0,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
-          changedTouches: [
-            {
-              clientX: 300,
-              clientY: 0,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchend', {
-          type: "touchend",
-        });
-
-        expect(spy.Tempo.mouseDown.notCalled).toBe(true);
-        expect(spy.Tempo.mouseMove.notCalled).toBe(true);
-        expect(spy.Tempo.mouseUp.notCalled).toBe(true);
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-
-      it('toggleHandler() * 2 => touchStart => touchMove => touchEnd', () => {
-        tempoInstance.toggleHandler();
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
-          changedTouches: [
-            {
-              clientX: 100,
-              clientY: 0,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
-          changedTouches: [
-            {
-              clientX: 300,
-              clientY: 0,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchend', {
-          type: "touchend",
-        });
-
-        expect(tempoInstance.state.tempoCurr).toBe(120);
         expect((tempoInstance as any).isTapped).toBe(false);
       });
     });
@@ -346,7 +223,6 @@ describe('Tempo', () => {
             from: 50,
             to: 200,
           }} 
-          isHandlerEnabled={true}
         />);
       tempoInstance = tempo.instance() as Tempo;
     
@@ -356,8 +232,7 @@ describe('Tempo', () => {
 
     describe('MouseEvent', () => {
       it('mouseDown', () => {
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
+        tempo.find(sel('temposelector-from')).simulate('mousedown', {
           clientX: 0,
           clientY: 300,
         });
@@ -367,13 +242,11 @@ describe('Tempo', () => {
       });
     
       it('mouseDown => mouseMove', () => {
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
+        tempo.find(sel('temposelector-from')).simulate('mousedown', {
           clientX: 0,
           clientY: 300,
         });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
+        tempo.find(sel('temposelector-from')).simulate('mousemove', {
           clientX: 0,
           clientY: 100,
         });
@@ -383,71 +256,23 @@ describe('Tempo', () => {
       });
     
       it('mouseDown => mouseMove => mouseUp', () => {
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
+        tempo.find(sel('temposelector-from')).simulate('mousedown', {
           clientX: 0,
           clientY: 300,
         });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
+        tempo.find(sel('temposelector-from')).simulate('mousemove', {
           clientX: 0,
           clientY: 100,
         });
-        tempo.find('.from').simulate('mouseup', {
-          type: 'mouseup',
-        });
+        tempo.find(sel('temposelector-from')).simulate('mouseup');
 
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-    
-      it('toggleHandler() => mouseDown => mouseMove => mouseUp', () => {
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
-          clientX: 0,
-          clientY: 300,
-        });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
-          clientX: 0,
-          clientY: 100,
-        });
-        tempo.find('.from').simulate('mouseup', {
-          type: 'mouseup',
-        });
-        
-        expect(spy.Tempo.mouseDown.notCalled).toBe(true);
-        expect(spy.Tempo.mouseMove.notCalled).toBe(true);
-        expect(spy.Tempo.mouseUp.notCalled).toBe(true);
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-    
-      it('toggleHandler() * 2 => mouseDown => mouseMove => mouseUp', () => {
-        tempoInstance.toggleHandler();
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('mousedown', {
-          type: 'mousedown',
-          clientX: 0,
-          clientY: 300,
-        });
-        tempo.find('.from').simulate('mousemove', {
-          type: 'mousemove',
-          clientX: 0,
-          clientY: 100,
-        });
-        tempo.find('.from').simulate('mouseup', {
-          type: 'mouseup',
-        });
-        
-        expect(tempoInstance.state.tempoCurr).toBe(120);
         expect((tempoInstance as any).isTapped).toBe(false);
       });
     });
 
     describe('TouchEvent', () => {
       it('touchStart', () => {
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
+        tempo.find(sel('temposelector-from')).simulate('touchstart', {
           changedTouches: [
             {
               clientX: 0,
@@ -461,8 +286,7 @@ describe('Tempo', () => {
       });
 
       it('touchStart => touchMove', () => {
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
+        tempo.find(sel('temposelector-from')).simulate('touchstart', {
           changedTouches: [
             {
               clientX: 0,
@@ -470,8 +294,7 @@ describe('Tempo', () => {
             },
           ],
         });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
+        tempo.find(sel('temposelector-from')).simulate('touchmove', {
           changedTouches: [
             {
               clientX: 0,
@@ -486,8 +309,7 @@ describe('Tempo', () => {
       });
 
       it('touchStart => touchMove => touchEnd', () => {
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
+        tempo.find(sel('temposelector-from')).simulate('touchstart', {
           changedTouches: [
             {
               clientX: 0,
@@ -495,8 +317,7 @@ describe('Tempo', () => {
             },
           ],
         });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
+        tempo.find(sel('temposelector-from')).simulate('touchmove', {
           changedTouches: [
             {
               clientX: 0,
@@ -504,69 +325,8 @@ describe('Tempo', () => {
             },
           ],
         });
-        tempo.find('.from').simulate('touchend', {
-          type: "touchend",
-        });
+        tempo.find(sel('temposelector-from')).simulate('touchend');
 
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-
-      it('toggleHandler() => touchStart => touchMove => touchEnd', () => {
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
-          changedTouches: [
-            {
-              clientX: 0,
-              clientY: 300,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
-          changedTouches: [
-            {
-              clientX: 0,
-              clientY: 100,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchend', {
-          type: "touchend",
-        });
-
-        expect(spy.Tempo.mouseDown.notCalled).toBe(true);
-        expect(spy.Tempo.mouseMove.notCalled).toBe(true);
-        expect(spy.Tempo.mouseUp.notCalled).toBe(true);
-        expect((tempoInstance as any).isTapped).toBe(false);
-      });
-
-      it('toggleHandler() * 2 => touchStart => touchMove => touchEnd', () => {
-        tempoInstance.toggleHandler();
-        tempoInstance.toggleHandler();
-        tempo.find('.from').simulate('touchstart', {
-          type: "touchstart",
-          changedTouches: [
-            {
-              clientX: 0,
-              clientY: 300,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchmove', {
-          type: "touchmove",
-          changedTouches: [
-            {
-              clientX: 0,
-              clientY: 100,
-            },
-          ],
-        });
-        tempo.find('.from').simulate('touchend', {
-          type: "touchend",
-        });
-
-        expect(tempoInstance.state.tempoCurr).toBe(120);
         expect((tempoInstance as any).isTapped).toBe(false);
       });
     });

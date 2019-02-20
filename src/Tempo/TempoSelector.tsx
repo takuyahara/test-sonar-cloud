@@ -14,12 +14,14 @@ interface IProps {
     to: number;
   };
   maxDelta: number;
-  isHandlerEnabled?: boolean;
   isDescEnabled?: boolean;
+  postProcess?: {
+    onChangeTempo: (childrenTempo: IChildrenTempo) => void;
+  };
   inheritedSelector?: ICssSelector;
 }
 interface IState {
-  isHandlerEnabled: boolean;
+  // empty
 }
 interface IChildren {
   from: Tempo;
@@ -35,8 +37,8 @@ class TempoSelector extends Component<IProps, IState> {
   private defaultTempo!: IProps['defaultTempo'];
   private range!: IProps['range'];
   private maxDelta!: IProps['maxDelta'];
-  private isHandlerEnabled!: boolean;
   private isDescEnabled!: boolean;
+  private postChangeTempo!: (childrenTempo: IChildrenTempo) => void;
 
   // Ref
   private refTempoFrom: RefObject<Tempo>;
@@ -45,8 +47,12 @@ class TempoSelector extends Component<IProps, IState> {
   public constructor(props: IProps) {
     super(props);
     this.state = {
-      isHandlerEnabled: true,
+      // empty
     };
+
+    // Post process
+    this.postChangeTempo = props.postProcess && props.postProcess.onChangeTempo ? 
+      props.postProcess.onChangeTempo : (childrenTempo: IChildrenTempo) => {};
 
     // Method binding
     this.onChangeTempo = this.onChangeTempo.bind(this);
@@ -62,24 +68,24 @@ class TempoSelector extends Component<IProps, IState> {
     this.defaultTempo = props.defaultTempo;
     this.range = props.range;
     this.maxDelta = props.maxDelta;
-    this.isHandlerEnabled = props.isHandlerEnabled !== undefined ? props.isHandlerEnabled : true;
     this.isDescEnabled = props.isDescEnabled !== undefined ? props.isDescEnabled : false;
   }
   private verifyTempo(caller: Tempo): void
   {
     const refTempoFrom = this.refTempoFrom.current!;
     const refTempoTo = this.refTempoTo.current!;
-    const tempoFrom = parseInt(refTempoFrom.tempo.toString());
-    const tempoTo = parseInt(refTempoTo.tempo.toString());
+    const tempoFrom = parseInt(refTempoFrom.getTempo().toString());
+    const tempoTo = parseInt(refTempoTo.getTempo().toString());
 
     if (tempoFrom > tempoTo) {
       const peer = this.getPeer(caller.props.role);
-      peer.changeTempo(caller.tempo, true);
+      peer.changeTempo(caller.getTempo(), true);
     }
   }
   private onChangeTempo(caller: Tempo): void {
     // Verify if isDescEnabled is false
     !this.isDescEnabled && this.verifyTempo(caller);
+    this.postChangeTempo(this.getChildrenTempo());
   }
   private getPeer(className: string): Tempo {
     const refTempoFrom = this.refTempoFrom.current!;
@@ -89,12 +95,6 @@ class TempoSelector extends Component<IProps, IState> {
       to: refTempoFrom,
     };
     return children[className];
-  }
-  public toggleTempoChange(): void {
-    const refTempoFrom = this.refTempoFrom.current!;
-    const refTempoTo = this.refTempoTo.current!;
-    refTempoFrom.toggleHandler();
-    refTempoTo.toggleHandler();
   }
   public getChildren(): IChildren {
     const refTempoFrom = this.refTempoFrom.current!;
@@ -107,8 +107,8 @@ class TempoSelector extends Component<IProps, IState> {
   public getChildrenTempo(): IChildrenTempo {
     const children = this.getChildren();
     return {
-      from: children.from.tempo,
-      to: children.to.tempo,
+      from: children.from.getTempo(),
+      to: children.to.getTempo(),
     };
   }
   /* istanbul ignore next */
@@ -124,9 +124,6 @@ class TempoSelector extends Component<IProps, IState> {
     }
     
     this.init(newProps);
-    this.setState({
-      isHandlerEnabled: this.isHandlerEnabled,
-    });
     !this.isDescEnabled && this.verifyTempo(this.refTempoTo.current!);
   }
   public render(): React.ReactNode {
@@ -138,7 +135,6 @@ class TempoSelector extends Component<IProps, IState> {
           tempo={this.defaultTempo.from} 
           range={this.range} 
           maxDelta={this.maxDelta} 
-          isHandlerEnabled={this.state.isHandlerEnabled} 
           onChangeTempo={this.onChangeTempo}
           inheritedSelector={style}
           />
@@ -148,7 +144,6 @@ class TempoSelector extends Component<IProps, IState> {
           tempo={this.defaultTempo.to} 
           range={this.range} 
           maxDelta={this.maxDelta} 
-          isHandlerEnabled={this.state.isHandlerEnabled} 
           onChangeTempo={this.onChangeTempo}
           inheritedSelector={style}
           />

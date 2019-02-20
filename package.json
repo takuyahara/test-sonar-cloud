@@ -23,6 +23,7 @@
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chalk": "2.4.2",
     "classnames": "^2.2.6",
+    "configcat-node": "^2.1.9",
     "css-loader": "2.1.0",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
@@ -109,6 +110,7 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/Utils.tsx",
+      "!src/ConfigCat.tsx",
       "!src/App.tsx",
       "!src/index.tsx",
       "!src/**/Status.ts",

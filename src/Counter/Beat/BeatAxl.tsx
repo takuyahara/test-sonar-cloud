@@ -187,7 +187,6 @@ class BeatAxl extends React.Component<IProps, IState> {
       const refBeat = this.refBeat.current!;
       refBeat.init({
         tempo: newProps.tempo.from,
-        tempoRange: newProps.tempo,
       });
     // }
   }
@@ -216,7 +215,6 @@ class BeatAxl extends React.Component<IProps, IState> {
       <Beat 
         ref={this.refBeat}
         tempo={this.props.tempo.from} 
-        tempoRange={this.props.tempo} 
         postProcess={{
           onTick: this.onTick,
           onStart: this.onStart,

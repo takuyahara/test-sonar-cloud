@@ -12,6 +12,7 @@ interface ISpy {
 }
 
 configure({ adapter: new Adapter() });
+const sel = (id: string) => `[data-testid="${id}"]`;
 
 let tempoSelector: ReactWrapper;
 let tempoSelectorInstance: TempoSelector;
@@ -66,19 +67,15 @@ describe('isDescEnabled = true', () => {
 
   describe('MouseEvent', () => {
     it('normal', () => {
-      tempoSelector.find('.from').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousedown', {
         clientX: 100,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousemove', {
         clientX: 300,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mouseup', {
-        type: 'mouseup',
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
       
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 130,
@@ -87,19 +84,15 @@ describe('isDescEnabled = true', () => {
     });
 
     it('`from` > `to`', () => {
-      tempoSelector.find('.from').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousedown', {
         clientX: 100,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousemove', {
         clientX: 300,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mouseup', {
-        type: 'mouseup',
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
 
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 130,
@@ -108,69 +101,26 @@ describe('isDescEnabled = true', () => {
     });
 
     it('`to` < `from`', () => {
-      tempoSelector.find('.to').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-to')).simulate('mousedown', {
         clientX: 350,
         clientY: 0,
       });
-      tempoSelector.find('.to').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-to')).simulate('mousemove', {
         clientX: 100,
         clientY: 0,
       });
-      tempoSelector.find('.to').simulate('mouseup', {
-        type: 'mouseup',
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
       
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 90,
         to: 70,
       });
     });
-
-    it('toggleTempoChange => .from MouseEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-      tempoSelector.find('.from').simulate('mousedown', {
-        type: 'mousedown',
-        clientX: 100,
-        clientY: 0,
-      });
-      tempoSelector.find('.from').simulate('mousemove', {
-        type: 'mousemove',
-        clientX: 300,
-        clientY: 0,
-      });
-      tempoSelector.find('.from').simulate('mouseup', {
-        type: 'mouseup',
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
-    });
-
-    it('toggleTempoChange => .to MouseEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-      tempoSelector.find('.to').simulate('mousedown', {
-        type: 'mousedown',
-        clientX: 100,
-        clientY: 0,
-      });
-      tempoSelector.find('.to').simulate('mousemove', {
-        type: 'mousemove',
-        clientX: 300,
-        clientY: 0,
-      });
-      tempoSelector.find('.to').simulate('mouseup', {
-        type: 'mouseup',
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
-    });
   });
 
   describe('TouchEvent', () => {
     it('normal', () => {
-      tempoSelector.find('.from').simulate('touchstart', {
-        type: "touchstart",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchstart', {
         changedTouches: [
           {
             clientX: 100,
@@ -178,8 +128,7 @@ describe('isDescEnabled = true', () => {
           },
         ],
       });
-      tempoSelector.find('.from').simulate('touchmove', {
-        type: "touchmove",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchmove', {
         changedTouches: [
           {
             clientX: 300,
@@ -187,9 +136,7 @@ describe('isDescEnabled = true', () => {
           },
         ],
       });
-      tempoSelector.find('.from').simulate('touchend', {
-        type: "touchend",
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('touchend');
 
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 130,
@@ -198,8 +145,7 @@ describe('isDescEnabled = true', () => {
     });
 
     it('`from` > `to`', () => {
-      tempoSelector.find('.from').simulate('touchstart', {
-        type: "touchstart",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchstart', {
         changedTouches: [
           {
             clientX: 100,
@@ -207,8 +153,7 @@ describe('isDescEnabled = true', () => {
           },
         ],
       });
-      tempoSelector.find('.from').simulate('touchmove', {
-        type: "touchmove",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchmove', {
         changedTouches: [
           {
             clientX: 300,
@@ -216,9 +161,7 @@ describe('isDescEnabled = true', () => {
           },
         ],
       });
-      tempoSelector.find('.from').simulate('touchend', {
-        type: "touchend",
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('touchend');
       
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 130,
@@ -227,8 +170,7 @@ describe('isDescEnabled = true', () => {
     });
 
     it('`to` < `from`', () => {
-      tempoSelector.find('.to').simulate('touchstart', {
-        type: "touchstart",
+      tempoSelector.find(sel('temposelector-to')).simulate('touchstart', {
         changedTouches: [
           {
             clientX: 350,
@@ -236,8 +178,7 @@ describe('isDescEnabled = true', () => {
           },
         ],
       });
-      tempoSelector.find('.to').simulate('touchmove', {
-        type: "touchmove",
+      tempoSelector.find(sel('temposelector-to')).simulate('touchmove', {
         changedTouches: [
           {
             clientX: 100,
@@ -245,69 +186,12 @@ describe('isDescEnabled = true', () => {
           },
         ],
       });
-      tempoSelector.find('.to').simulate('touchend', {
-        type: "touchend",
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('touchend');
       
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 90,
         to: 70,
       });
-    });
-
-    it('toggleTempoChange => .from TouchEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-      tempoSelector.find('.from').simulate('touchstart', {
-        type: "touchstart",
-        changedTouches: [
-          {
-            clientX: 100,
-            clientY: 0,
-          },
-        ],
-      });
-      tempoSelector.find('.from').simulate('touchmove', {
-        type: "touchmove",
-        changedTouches: [
-          {
-            clientX: 300,
-            clientY: 0,
-          },
-        ],
-      });
-      tempoSelector.find('.from').simulate('touchend', {
-        type: "touchend",
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
-    });
-
-    it('toggleTempoChange => .to TouchEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-      tempoSelector.find('.to').simulate('touchstart', {
-        type: "touchstart",
-        changedTouches: [
-          {
-            clientX: 100,
-            clientY: 0,
-          },
-        ],
-      });
-      tempoSelector.find('.to').simulate('touchmove', {
-        type: "touchmove",
-        changedTouches: [
-          {
-            clientX: 300,
-            clientY: 0,
-          },
-        ],
-      });
-
-      tempoSelector.find('.to').simulate('touchend', {
-        type: "touchend",
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
     });
   });
 });
@@ -360,19 +244,15 @@ describe('isDescEnabled = false', () => {
 
   describe('MouseEvent', () => {
     it('normal', () => {
-      tempoSelector.find('.from').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousedown', {
         clientX: 100,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousemove', {
         clientX: 200,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mouseup', {
-        type: 'mouseup',
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
 
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 110,
@@ -381,19 +261,15 @@ describe('isDescEnabled = false', () => {
     });
 
     it('`from` > `to`', () => {
-      tempoSelector.find('.from').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousedown', {
         clientX: 100,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousemove', {
         clientX: 300,
         clientY: 0,
       });
-      tempoSelector.find('.from').simulate('mouseup', {
-        type: 'mouseup',
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
       
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 130,
@@ -402,19 +278,15 @@ describe('isDescEnabled = false', () => {
     });
 
     it('`to` < `from`', () => {
-      tempoSelector.find('.to').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-to')).simulate('mousedown', {
         clientX: 350,
         clientY: 0,
       });
-      tempoSelector.find('.to').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-to')).simulate('mousemove', {
         clientX: 100,
         clientY: 0,
       });
-      tempoSelector.find('.to').simulate('mouseup', {
-        type: 'mouseup',
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
       
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 70,
@@ -423,93 +295,36 @@ describe('isDescEnabled = false', () => {
     });
 
     it('.from 90 => 150, .to 150 => 140', () => {
-      tempoSelector.find('.from').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousedown', {
         clientX: 100,
         clientY: 0,
       });
-
-      tempoSelector.find('.from').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-from')).simulate('mousemove', {
         clientX: 400,
         clientY: 0,
       });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
 
-      tempoSelector.find('.from').simulate('mouseup', {
-        type: 'mouseup',
-      });
-
-      tempoSelector.find('.to').simulate('mousedown', {
-        type: 'mousedown',
+      tempoSelector.find(sel('temposelector-to')).simulate('mousedown', {
         clientX: 250,
         clientY: 0,
       });
-
-      tempoSelector.find('.to').simulate('mousemove', {
-        type: 'mousemove',
+      tempoSelector.find(sel('temposelector-to')).simulate('mousemove', {
         clientX: 200,
         clientY: 0,
       });
-
-      tempoSelector.find('.to').simulate('mouseup', {
-        type: 'mouseup',
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('mouseup');
 
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 140,
         to: 140,
       });
     });
-
-    it('toggleTempoChange => .from MouseEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-
-      tempoSelector.find('.from').simulate('mousedown', {
-        type: 'mousedown',
-        clientX: 100,
-        clientY: 0,
-      });
-
-      tempoSelector.find('.from').simulate('mousemove', {
-        type: 'mousemove',
-        clientX: 300,
-        clientY: 0,
-      });
-
-      tempoSelector.find('.from').simulate('mouseup', {
-        type: 'mouseup',
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
-    });
-
-    it('toggleTempoChange => .to MouseEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-
-      tempoSelector.find('.to').simulate('mousedown', {
-        type: 'mousedown',
-        clientX: 100,
-        clientY: 0,
-      });
-
-      tempoSelector.find('.to').simulate('mousemove', {
-        type: 'mousemove',
-        clientX: 300,
-        clientY: 0,
-      });
-
-      tempoSelector.find('.to').simulate('mouseup', {
-        type: 'mouseup',
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
-    });
   });
 
   describe('TouchEvent', () => {
     it('normal', () => {
-      tempoSelector.find('.from').simulate('touchstart', {
-        type: "touchstart",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchstart', {
         changedTouches: [
           {
             clientX: 100,
@@ -517,8 +332,7 @@ describe('isDescEnabled = false', () => {
           },
         ],
       });
-      tempoSelector.find('.from').simulate('touchmove', {
-        type: "touchmove",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchmove', {
         changedTouches: [
           {
             clientX: 200,
@@ -526,9 +340,7 @@ describe('isDescEnabled = false', () => {
           },
         ],
       });
-      tempoSelector.find('.from').simulate('touchend', {
-        type: "touchend",
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('touchend');
       
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 110,
@@ -537,8 +349,7 @@ describe('isDescEnabled = false', () => {
     });
 
     it('`from` > `to`', () => {
-      tempoSelector.find('.from').simulate('touchstart', {
-        type: "touchstart",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchstart', {
         changedTouches: [
           {
             clientX: 100,
@@ -546,9 +357,7 @@ describe('isDescEnabled = false', () => {
           },
         ],
       });
-
-      tempoSelector.find('.from').simulate('touchmove', {
-        type: "touchmove",
+      tempoSelector.find(sel('temposelector-from')).simulate('touchmove', {
         changedTouches: [
           {
             clientX: 300,
@@ -556,10 +365,7 @@ describe('isDescEnabled = false', () => {
           },
         ],
       });
-      
-      tempoSelector.find('.from').simulate('touchend', {
-        type: "touchend",
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('touchend');
 
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 130,
@@ -568,8 +374,7 @@ describe('isDescEnabled = false', () => {
     });
 
     it('`to` < `from`', () => {
-      tempoSelector.find('.to').simulate('touchstart', {
-        type: "touchstart",
+      tempoSelector.find(sel('temposelector-to')).simulate('touchstart', {
         changedTouches: [
           {
             clientX: 350,
@@ -577,9 +382,7 @@ describe('isDescEnabled = false', () => {
           },
         ],
       });
-
-      tempoSelector.find('.to').simulate('touchmove', {
-        type: "touchmove",
+      tempoSelector.find(sel('temposelector-to')).simulate('touchmove', {
         changedTouches: [
           {
             clientX: 100,
@@ -587,75 +390,12 @@ describe('isDescEnabled = false', () => {
           },
         ],
       });
-      
-      tempoSelector.find('.to').simulate('touchend', {
-        type: "touchend",
-      });
+      tempoSelector.find(sel('temposelector-from')).simulate('touchend');
 
       expect(tempoSelectorInstance.getChildrenTempo()).toMatchObject({
         from: 70,
         to: 70,
       });
-    });
-
-    it('toggleTempoChange => .from TouchEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-
-      tempoSelector.find('.from').simulate('touchstart', {
-        type: "touchstart",
-        changedTouches: [
-          {
-            clientX: 100,
-            clientY: 0,
-          },
-        ],
-      });
-
-      tempoSelector.find('.from').simulate('touchmove', {
-        type: "touchmove",
-        changedTouches: [
-          {
-            clientX: 300,
-            clientY: 0,
-          },
-        ],
-      });
-      
-      tempoSelector.find('.from').simulate('touchend', {
-        type: "touchend",
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
-    });
-
-    it('toggleTempoChange => .to TouchEvent', () => {
-      tempoSelectorInstance.toggleTempoChange();
-
-      tempoSelector.find('.to').simulate('touchstart', {
-        type: "touchstart",
-        changedTouches: [
-          {
-            clientX: 100,
-            clientY: 0,
-          },
-        ],
-      });
-
-      tempoSelector.find('.to').simulate('touchmove', {
-        type: "touchmove",
-        changedTouches: [
-          {
-            clientX: 300,
-            clientY: 0,
-          },
-        ],
-      });
-      
-      tempoSelector.find('.to').simulate('touchend', {
-        type: "touchend",
-      });
-
-      expect(spy.TempoSelector.onChangeTempo.notCalled).toBe(true);
     });
   });
 });

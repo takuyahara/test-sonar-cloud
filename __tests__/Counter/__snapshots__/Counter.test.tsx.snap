@@ -168,12 +168,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -360,12 +354,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -552,12 +540,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -744,12 +726,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -936,12 +912,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -1128,12 +1098,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -1320,12 +1284,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -1512,12 +1470,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -1704,12 +1656,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -1896,12 +1842,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -2088,12 +2028,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -2280,12 +2214,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -2472,12 +2400,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -2664,12 +2586,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -2856,12 +2772,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -3048,12 +2958,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -3240,12 +3144,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -3432,12 +3330,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -3624,12 +3516,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -3816,12 +3702,6 @@ exports[`Counter tempo.from < tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 150,
-          }
-        }
       >
         <div
           className="tempo"
@@ -4008,12 +3888,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Indicat
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -4200,12 +4074,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Indicat
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -4392,12 +4260,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Indicat
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -4584,12 +4446,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Indicat
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -4776,12 +4632,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -4968,12 +4818,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -5160,12 +5004,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -5352,12 +5190,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -5544,12 +5376,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -5736,12 +5562,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -5928,12 +5748,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -6120,12 +5934,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is not started Ring.mo
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -6312,12 +6120,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -6504,12 +6306,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -6696,12 +6492,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -6888,12 +6678,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -7080,12 +6864,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -7272,12 +7050,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -7464,12 +7236,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -7656,12 +7422,6 @@ exports[`Counter tempo.from === tempo.to MouseEvent Timer is running Ring.moused
           }
         }
         tempo={90}
-        tempoRange={
-          Object {
-            "from": 90,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -7848,12 +7608,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -8040,12 +7794,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -8232,12 +7980,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -8424,12 +8166,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Indicator
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -8616,12 +8352,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -8808,12 +8538,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -9000,12 +8724,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -9192,12 +8910,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -9384,12 +9096,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -9576,12 +9282,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -9768,12 +9468,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -9960,12 +9654,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is not started Ring.mous
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -10152,12 +9840,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -10344,12 +10026,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -10536,12 +10212,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -10728,12 +10398,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -10920,12 +10584,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -11112,12 +10770,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -11304,12 +10956,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"
@@ -11496,12 +11142,6 @@ exports[`Counter tempo.from > tempo.to MouseEvent Timer is running Ring.mousedow
           }
         }
         tempo={150}
-        tempoRange={
-          Object {
-            "from": 150,
-            "to": 90,
-          }
-        }
       >
         <div
           className="tempo"

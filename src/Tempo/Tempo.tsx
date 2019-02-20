@@ -14,7 +14,6 @@ interface IProps {
     from: number;
     to: number;
   };
-  isHandlerEnabled?: boolean;
   onChangeTempo?: (t: Tempo) => void;
   inheritedSelector?: ICssSelector;
 }
@@ -22,16 +21,12 @@ interface IBCRSize {
   width: number;
   height: number;
 }
-interface IHandlers {
-  [key: string]: (e: React.MouseEvent | React.TouchEvent) => void;
-}
 class Tempo extends Component<IProps, IState> {
   // Initialize in init()
   private tempoPrev!: number;
   private role!: IProps['role'];
   private maxDelta!: IProps['maxDelta'];
   private range!: IProps['range'];
-  private isHandlerEnabled!: IProps['isHandlerEnabled'];
   private isTapped!: boolean;
   private distFrom!: number;
   private postChangeTempo!: (t: Tempo) => void;
@@ -53,34 +48,18 @@ class Tempo extends Component<IProps, IState> {
     this.mouseMove = this.mouseMove.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.mouseDown = this.mouseDown.bind(this);
-    this.getHandler = this.getHandler.bind(this);
   }
   private init(props: IProps): void {
     // Props
     this.role = props.role;
     this.maxDelta = props.maxDelta;
     this.range = props.range;
-    this.isHandlerEnabled = props.isHandlerEnabled ? props.isHandlerEnabled : true;
     
     // Misc
     this.isTapped = false;
     this.distFrom = 0;
     this.tempoPrev = this.state.tempoCurr;
     this.postChangeTempo = props.onChangeTempo !== undefined  ? props.onChangeTempo : () => {};
-  }
-  private getHandler(e: React.MouseEvent | React.TouchEvent): void {
-    const handlers: IHandlers = {
-      mousedown: this.mouseDown,
-      mousemove: this.mouseMove,
-      mouseup: this.mouseUp,
-      touchstart: this.mouseDown,
-      touchmove: this.mouseMove,
-      touchend: this.mouseUp,
-    };
-    const handlerToRun = handlers[e.type];
-    if (this.isHandlerEnabled) {
-      handlerToRun(e);
-    }
   }
   /* istanbul ignore next */
   private isPortrait(): boolean {
@@ -137,10 +116,7 @@ class Tempo extends Component<IProps, IState> {
     }
     return newTempo;
   }
-  public toggleHandler(): void {
-    this.isHandlerEnabled = !this.isHandlerEnabled;
-  }
-  public get tempo(): number {
+  public getTempo(): number {
     return this.state.tempoCurr;
   }
   public changeTempo(tempo: number, dontRunCallback?: boolean): void {
@@ -198,14 +174,15 @@ class Tempo extends Component<IProps, IState> {
       <div 
         ref={this.refDiv} 
         className={style[this.role]} 
-        onMouseDown={this.getHandler} 
-        onMouseUp={this.getHandler} 
-        onMouseMove={this.getHandler} 
-        onTouchStart={this.getHandler} 
-        onTouchEnd={this.getHandler} 
-        onTouchMove={this.getHandler} 
+        data-testid={`temposelector-${this.role}`}
+        onMouseDown={this.mouseDown} 
+        onMouseUp={this.mouseUp} 
+        onMouseMove={this.mouseMove} 
+        onTouchStart={this.mouseDown} 
+        onTouchEnd={this.mouseUp} 
+        onTouchMove={this.mouseMove} 
       >
-        <span className={style.tempoValue}>
+        <span>
           {this.state.tempoCurr}
         </span>
       </div>
