@@ -1,0 +1,71 @@
+@import "../../mixins";
+$ringSize: 300px;
+$ringStrokeWidth: 10px;
+$ringCenter: $ringSize / 2;
+$ringRadius: $ringSize / 2;
+$maskStrokeWidth: 70px;
+
+// Main
+.ring {
+    @include centralize;
+    svg {
+        width: $ringSize;
+        height: $ringSize;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        .remaining {
+            r: $ringRadius - $ringStrokeWidth / 2;
+            cx: $ringCenter;
+            cy: $ringCenter;
+            fill: orange;
+            stroke: orange;
+            stroke-width: $ringStrokeWidth;
+        }
+        .mask {
+            r: $ringRadius - $maskStrokeWidth / 2 - $ringStrokeWidth;
+            cx: $ringCenter;
+            cy: $ringCenter;
+            fill: transparent;
+            stroke-width: $maskStrokeWidth;
+            transform: rotate(180deg);
+            transform-origin: $ringCenter $ringCenter;
+            opacity: 0.8;
+        }
+        .mask[stroke-dasharray^="0 "] {
+            opacity: 0;
+        }
+        .tapArea {
+            r: $ringRadius;
+            cx: $ringCenter;
+            cy: $ringCenter;
+            fill: transparent;
+            stroke: none;
+        }
+        .tapAreaMask {
+            r: $ringRadius - $ringStrokeWidth - $maskStrokeWidth;
+            cx: $ringCenter;
+            cy: $ringCenter;
+            fill: transparent;
+            stroke: none;
+        }
+        #maskGradient stop[offset="30%"] {
+            stop-color: rgb(60, 60, 60);
+        }
+        #maskGradient stop[offset="100%"] {
+            stop-color: rgb(0, 0, 0);
+        }
+    }
+    .globalTapArea[data-is-bubbled="false"] {
+        display: none;
+    }
+    .globalTapArea[data-is-bubbled="true"] {
+        display: block;
+        position: absolute;
+        top: calc(-50vh + #{$ringRadius});
+        left: calc(-50vw + #{$ringRadius});
+        width: 100vw;
+        height: 100vh;
+    }
+}

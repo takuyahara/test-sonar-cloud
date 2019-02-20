@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+    "extensions": {
+        "recommendations": [
+			"msjsdiag.debugger-for-chrome",
+			"eamodio.gitlens",
+			"eg2.tslint"
+        ]
+    }
+}

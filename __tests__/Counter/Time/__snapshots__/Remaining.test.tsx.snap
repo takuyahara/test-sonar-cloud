@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Indicator with post process MouseEvent invokes postClick 1`] = `
+<Remaining
+  postProcess={
+    Object {
+      "onClick": [Function],
+      "onTouchEnd": [Function],
+    }
+  }
+  timeToCount={900}
+>
+  <div
+    className="indicator"
+    data-testid="indicator-remaining"
+    onClick={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="remaining"
+    >
+      15:00
+    </div>
+  </div>
+</Remaining>
+`;
+
+exports[`Indicator with post process TouchEvent invokes postTouchEnd 1`] = `
+<Remaining
+  postProcess={
+    Object {
+      "onClick": [Function],
+      "onTouchEnd": [Function],
+    }
+  }
+  timeToCount={900}
+>
+  <div
+    className="indicator"
+    data-testid="indicator-remaining"
+    onClick={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="remaining"
+    >
+      15:00
+    </div>
+  </div>
+</Remaining>
+`;
+
+exports[`Indicator without post process MouseEvent click 1`] = `
+<Remaining
+  timeToCount={900}
+>
+  <div
+    className="indicator"
+    data-testid="indicator-remaining"
+    onClick={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="remaining"
+    >
+      15:00
+    </div>
+  </div>
+</Remaining>
+`;
+
+exports[`Indicator without post process TouchEvent touchEnd 1`] = `
+<Remaining
+  timeToCount={900}
+>
+  <div
+    className="indicator"
+    data-testid="indicator-remaining"
+    onClick={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="remaining"
+    >
+      15:00
+    </div>
+  </div>
+</Remaining>
+`;
+
+exports[`Indicator without post process formats number 1`] = `
+<Remaining
+  timeToCount={900}
+>
+  <div
+    className="indicator"
+    data-testid="indicator-remaining"
+    onClick={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="remaining"
+    >
+      15:00
+    </div>
+  </div>
+</Remaining>
+`;
+
+exports[`Indicator without post process setRemaining 1`] = `
+<Remaining
+  timeToCount={900}
+>
+  <div
+    className="indicator"
+    data-testid="indicator-remaining"
+    onClick={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className="remaining"
+    >
+      01:00
+    </div>
+  </div>
+</Remaining>
+`;

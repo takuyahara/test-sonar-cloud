@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "/Users/thara/PhpstormProjects/axl-metronome"
+		}
+	],
+	"settings": {
+		"tslint.alwaysShowStatus": true,
+		"tslint.configFile": "tslint.json",
+		"tslint.packageManager": "yarn"
+	},
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false
+}

@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- 11.1.0
+before_install:
+- yarn global add codecov snyk
+before_script:
+- yarn pre-commit
+script:
+- yarn coverage
+after_script:
+- codecov
+notifications:
+  slack:
+    secure: aIX+gBgrSuWWZhfAbMUPnSfHBDRhXj93RGOy+q+lYsvLiLIyMv0T/pwdra1OBkgQDkFef+4wboFtW24xhSFfsIY6C6AGzWPvFDJE9K+OlOPcRj4L2qByS7YYGan8AzdOCX4q2TClbvM59eBoLd3t+lT7PjBrAfHYWgBzFBfKTG8e4qweawSQhxZ2cxDmY9OftLjU3iMPF+CNMrzPfZPnWVDW9UeLqTR62crNaoW3120GLzniLinDNCCnWxUhbdxn+4fueaU4h1GzqIiGzLXIGgYLswvA0wGDALYtz9c0FYCCRogxD9Xl2LTPREgVhU2Ex05oHOBqpwO80tQzim6KEQ92jRPhwqhCkxFXV/0ZtvufB8+a3wcQTn+HbkUJ12ZDAMUicgBUjy4YJ9gM9AmID2RsAvr0G3VqivISqkeCtnSinmlDVY7MW24ACoil4MnWy5CxYrABFCXyxaeIq5XtZ3EzmWXdG6BXgxCyx4fd2Pvov1OOHhXiHHgLNumqizAyRxoLd5yy28zxnRwFeeNqCB6GVU5Qr2lDh01uNTUDgNMoaJ8FVkHfOF9eGwhEOT/6UCRINzFSXex01x2tasyPxczY4BCWNUXxhLv2hBcBV53+G8xKlmgzoQDh/aFCqIe+5keJ2Or0OWlZ9hpQWWkb0qyCvBl/reS+4ON+fjRy4aQ=

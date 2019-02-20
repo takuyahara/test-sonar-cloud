@@ -1,0 +1,15 @@
+// Constant
+$counter-width: 300px;
+$counter-height: 300px;
+
+// Variable
+$counter-center-x: $counter-width / 2;
+$counter-center-y: $counter-height / 2;
+
+// Mixin
+@mixin centralize {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
