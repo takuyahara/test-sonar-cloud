@@ -34,7 +34,6 @@ function render(config: IConfig): void {
     document.getElementById('root') as HTMLElement,
   );
 }
-// render(defaultConfig);
 
 if (process.env.NODE_ENV === 'production') {
   const bugsnagClient = bugsnag({
@@ -46,6 +45,8 @@ if (process.env.NODE_ENV === 'production') {
     identifier: process.env.CC_ID!,
   });
   configcat.setDefaultConfig(defaultConfig).load(render);
+} else {
+  render(defaultConfig);
 }
 
 // If you want your app to work offline and load faster, you can change
