@@ -20,6 +20,12 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "sounds/*": [
+        "src/sounds/*"
+      ],
       "*": [
         "*",
         "src/*"
@@ -27,8 +33,6 @@
     }
   },
   "include": [
-    "src",
-    "stories",
-    "__tests__"
+    "src"
   ]
 }

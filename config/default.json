@@ -1,0 +1,18 @@
+{
+  "AxlMetronome": {
+    "tempoFrom": 90,
+    "tempoTo": 150,
+    "rangeFrom": 60,
+    "rangeTo": 780,
+    "maxDelta": 100,
+    "remaining": 1800,
+    "isDescEnabled": true
+  },
+  "Bugsnag": {
+    "API": "d0a9b02d00ea84b48113753ed7344030"
+  },
+  "ConfigCat": {
+    "API": "PIjWCOBb9OZa_oaa7Igmyg/auta_jdWJUOw6NLz3LjyUg",
+    "ID": "435170f4-8a8b-4b67-a723-505ac7cdea92"
+  }
+}
