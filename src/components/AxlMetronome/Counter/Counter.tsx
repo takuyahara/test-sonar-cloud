@@ -9,7 +9,6 @@ import Status from './Time/Status';
 interface IProps {
   tempo: ITempo;
   remaining: number;
-  inheritedClassName?: string;
 }
 interface IState {
   tempo: ITempo;
@@ -98,6 +97,10 @@ class Counter extends React.Component<IProps, IState> {
     if (refTime.getState() === Status.Running) {
       refBeat.resume();
     }
+  }
+  public setTempo(newTempo: number): void {
+    const refBeat = this.refBeat.current!;
+    refBeat.setTempo(newTempo);
   }
   public getState(): Status {
     const refTime = this.refTime.current!;

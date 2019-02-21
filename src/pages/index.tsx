@@ -1,7 +1,6 @@
 import React from "react";
 import SEO from "../components/seo";
-import AxlMetronome from '../components/AxlMetronome';
-import './index.scss';
+import AxlMetronome from '../components/AxlMetronome/AxlMetronome';
 import bugsnag from '@bugsnag/js';
 import bugsnagReact from '@bugsnag/plugin-react';
 

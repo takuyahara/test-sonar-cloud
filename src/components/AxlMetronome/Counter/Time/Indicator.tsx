@@ -4,7 +4,7 @@ import Remaining from './Remaining';
 import Timer from './Timer';
 import Status from './Status';
 // import style from './Indicator.module.scss';
-import Utils, { ICssSelector } from '../../Utils';
+import Utils, { ICssSelector } from 'utils/Utils';
 
 interface IProps {
   timeToCount: number;

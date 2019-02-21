@@ -167,6 +167,10 @@ class BeatAxl extends React.Component<IProps, IState> {
     this.cntAcceleration = this.getCntAcceleration(progress);
     this.interval = this.getInterval(progress);
   }
+  public setTempo(newTempo: number): void {
+    const refBeat = this.refBeat.current!;
+    return refBeat.setTempo(newTempo);
+  }
   public getTempo(): number {
     const refBeat = this.refBeat.current!;
     return refBeat.getTempo();

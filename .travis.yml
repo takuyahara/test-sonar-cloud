@@ -4,6 +4,7 @@ node_js:
 before_install:
 - yarn global add codecov snyk
 before_script:
+- yarn patch
 - yarn pre-commit
 script:
 - yarn coverage

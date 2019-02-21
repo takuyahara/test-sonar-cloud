@@ -62,9 +62,6 @@ class TempoSelector extends Component<IProps, IState> {
     this.refTempoTo = createRef<Tempo>();
 
     // Initialize
-    this.init(props);
-  }
-  private init(props: IProps): void {
     this.defaultTempo = props.defaultTempo;
     this.range = props.range;
     this.maxDelta = props.maxDelta;
@@ -111,6 +108,27 @@ class TempoSelector extends Component<IProps, IState> {
       to: children.to.getTempo(),
     };
   }
+  public init(props: IProps): void {
+    this.defaultTempo = props.defaultTempo;
+    this.range = props.range;
+    this.maxDelta = props.maxDelta;
+    this.isDescEnabled = props.isDescEnabled !== undefined ? props.isDescEnabled : false;
+
+    const refTempoFrom = this.refTempoFrom.current!;
+    const refTempoTo = this.refTempoTo.current!;
+    refTempoFrom.init({
+      role: "from",
+      tempo: props.defaultTempo.from,
+      maxDelta: props.maxDelta,
+      range: props.range,
+    });
+    refTempoTo.init({
+      role: "to",
+      tempo: props.defaultTempo.to,
+      maxDelta: props.maxDelta,
+      range: props.range,
+    });
+  }
   /* istanbul ignore next */
   public componentWillMount(): void {
     if (this.props.inheritedSelector) {
@@ -123,8 +141,13 @@ class TempoSelector extends Component<IProps, IState> {
       return;
     }
     
+    if (newProps.range.from > newProps.range.to) {
+      throw new RangeError(`Range.from cannot be greater than Range.to.`);
+    }
+    if (!newProps.isDescEnabled && newProps.defaultTempo.from > newProps.defaultTempo.to) {
+      throw new RangeError(`DefaultTempo.From cannot be greater than DefaultTempo.To when isDescEnabled is false.`);
+    }
     this.init(newProps);
-    !this.isDescEnabled && this.verifyTempo(this.refTempoTo.current!);
   }
   public render(): React.ReactNode {
     return (

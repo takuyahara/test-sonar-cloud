@@ -1,9 +1,12 @@
 {
-  "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
   "linterOptions": {
     "exclude": [
-      "src/serviceWorker.ts",
-      "src/react-app-env.d.ts",
+      "src/declarations.d.ts",
       "config/**/*.js",
       "node_modules/**/*.ts",
       "node_modules_patch/**/*.ts",
@@ -13,7 +16,7 @@
     ]
   },
   "rules": {
-    "object-literal-sort-keys" : false,
+    "object-literal-sort-keys": false,
     "member-access": [
       true,
       "check-accessor",
@@ -24,7 +27,9 @@
     "no-empty-interface": false,
     "no-unused-expression": {
       "severity": "error",
-      "options": ["allow-fast-null-checks"]
+      "options": [
+        "allow-fast-null-checks"
+      ]
     },
     "no-unused-variable": {
       "severity": "warn"
@@ -43,7 +48,12 @@
         ]
       }
     ],
-    "variable-name": [true, "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    "variable-name": [
+      true, 
+      "check-format", 
+      "allow-leading-underscore", 
+      "allow-pascal-case"
+    ],
     "ordered-imports": false,
     "typedef": [
       true,
@@ -57,9 +67,9 @@
       "always"
     ],
     "trailing-comma": [
-      true, 
+      true,
       {
-        "multiline": "always", 
+        "multiline": "always",
         "singleline": "never"
       }
     ],

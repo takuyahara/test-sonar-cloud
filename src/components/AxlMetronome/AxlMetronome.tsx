@@ -31,11 +31,11 @@ interface IRange {
 
 class AxlMetronome extends Component<IProps, IState> {
   // Initialize in init()
-  private tempo!: ITempo;
-  private range!: IRange;
-  private maxDelta!: number;
-  private remaining!: number;
-  private isDescEnabled!: boolean;
+  private tempo: ITempo;
+  private range: IRange;
+  private maxDelta: number;
+  private remaining: number;
+  private isDescEnabled: boolean;
 
   // Ref
   private refTempoSelector: RefObject<TempoSelector>;
@@ -43,8 +43,9 @@ class AxlMetronome extends Component<IProps, IState> {
 
   public constructor(props: IProps) {
     super(props);
+    /* istanbul ignore next */
     this.state = {
-      isConfigLoaded: false,
+      isConfigLoaded: process.env.NODE_ENV === 'production' ? false : true,
       tempo: props.tempo,
     };
 
@@ -56,35 +57,31 @@ class AxlMetronome extends Component<IProps, IState> {
     this.onChangeTempo = this.onChangeTempo.bind(this);
     this.reload = this.reload.bind(this);
 
-    this.init(props);
+    this.tempo = this.props.tempo;
+    this.range = this.props.range;
+    this.maxDelta = this.props.maxDelta;
+    this.remaining = this.props.remaining;
+    this.isDescEnabled = this.props.isDescEnabled;
   }
-  private init(props: IProps): void {
-    this.tempo = props.tempo;
-    this.range = props.range;
-    this.maxDelta = props.maxDelta;
-    this.remaining = props.remaining;
-    this.isDescEnabled = props.isDescEnabled;
+  private onChangeTempo(newTempo: ITempo): void {
+    const refCounter = this.refCounter.current!;
+    refCounter.setTempo(newTempo.from);
   }
-  private onChangeTempo(childrenTempo: ITempo): void {
-    this.setState({
-      tempo: childrenTempo,
-    });
-  }
+  /* istanbul ignore next */
   private reload(newConfig: IConfig): void {
     // Intended to be called when ConfigCat loads values.
-    this.init({
-      tempo: {
-        from: newConfig.tempoFrom as number,
-        to: newConfig.tempoTo as number,
-      },
-      range: {
-        from: newConfig.rangeFrom as number,
-        to: newConfig.rangeTo as number,
-      },
-      maxDelta: newConfig.maxDelta as number,
-      remaining: newConfig.remaining as number,
-      isDescEnabled: newConfig.isDescEnabled as boolean,
-    });
+    this.tempo = {
+      from: newConfig.tempoFrom as number,
+      to: newConfig.tempoTo as number,
+    };
+    this.range = {
+      from: newConfig.rangeFrom as number,
+      to: newConfig.rangeTo as number,
+    };
+    this.maxDelta = newConfig.maxDelta as number;
+    this.remaining = newConfig.remaining as number;
+    this.isDescEnabled = newConfig.isDescEnabled as boolean;
+
     this.setState({
       isConfigLoaded: true,
       tempo: {
@@ -97,8 +94,20 @@ class AxlMetronome extends Component<IProps, IState> {
     const refCounter = this.refCounter.current!;
     return refCounter.getState();
   }
+  public init(newProps: IProps): void {
+    const refTempoSelector = this.refTempoSelector.current!;
+    const refCounter = this.refCounter.current!;
+    refTempoSelector.init({
+      defaultTempo: newProps.tempo,
+      range: newProps.range,
+      maxDelta: newProps.maxDelta,
+      isDescEnabled: newProps.isDescEnabled,
+    });
+    refCounter.init(newProps);
+  }
+  /* istanbul ignore next */
   public componentWillMount(): void {
-    // if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {
       const configcat = new ConfigCat(ccConfig.API, {
         identifier: ccConfig.ID,
       });
@@ -109,9 +118,9 @@ class AxlMetronome extends Component<IProps, IState> {
         rangeTo: this.props.range.to,
         maxDelta: this.props.maxDelta,
         remaining: this.props.remaining,
-        isDescEnabled: true,
+        isDescEnabled: this.props.isDescEnabled,
       }).load(this.reload, 800);
-    // }
+    }
   }
   /* istanbul ignore next */
   public componentWillReceiveProps(newProps: IProps): void {
@@ -119,17 +128,24 @@ class AxlMetronome extends Component<IProps, IState> {
       return;
     }
 
-    const refTempoSelector = this.refTempoSelector.current!;
-    const childrenTempo = refTempoSelector.getChildrenTempo();
-    const isTempoFixed = this.props.isDescEnabled && !newProps.isDescEnabled && childrenTempo.from > childrenTempo.to;
-    this.setState({
-      tempo: {
-        from: isTempoFixed ? childrenTempo.to : childrenTempo.from,
-        to: childrenTempo.to,
-      },
-    });
+    const lowerTempo = newProps.tempo.from < newProps.tempo.to ? newProps.tempo.from : newProps.tempo.to;
+    const greaterTempo = newProps.tempo.from < newProps.tempo.to ? newProps.tempo.to : newProps.tempo.from;
+    if (newProps.range.from > newProps.range.to) {
+      throw new RangeError(`Range.from cannot be greater than Range.to.`);
+    }
+    if (!newProps.isDescEnabled && newProps.tempo.from > newProps.tempo.to) {
+      throw new RangeError(`Tempo.From cannot be greater than Tempo.To when isDescEnabled is false.`);
+    }
+    if (greaterTempo > newProps.range.to) {
+      throw new RangeError(`Tempo cannot be greater than Range.To.`);
+    }
+    if (lowerTempo < newProps.range.from) {
+      throw new RangeError(`Tempo cannot be less than Range.From.`);
+    }
+    this.init(newProps);
   }
   public render(): React.ReactNode {
+    /* istanbul ignore if */
     if (!this.state.isConfigLoaded) {
       return (
         <div 
@@ -156,9 +172,8 @@ class AxlMetronome extends Component<IProps, IState> {
         />
         <Counter 
           ref={this.refCounter}
-          remaining={this.props.remaining} 
-          tempo={this.state.tempo} 
-          inheritedSelector={style} 
+          remaining={this.remaining} 
+          tempo={this.tempo} 
         />
       </div>
     );

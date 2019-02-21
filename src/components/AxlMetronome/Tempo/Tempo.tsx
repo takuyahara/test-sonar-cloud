@@ -39,7 +39,6 @@ class Tempo extends Component<IProps, IState> {
     this.state = {
       tempoCurr: props.tempo,
     };
-    this.init(props);
 
     // Ref
     this.refDiv = createRef<HTMLDivElement>();
@@ -48,17 +47,14 @@ class Tempo extends Component<IProps, IState> {
     this.mouseMove = this.mouseMove.bind(this);
     this.mouseUp = this.mouseUp.bind(this);
     this.mouseDown = this.mouseDown.bind(this);
-  }
-  private init(props: IProps): void {
-    // Props
+
+    // Local variables
     this.role = props.role;
     this.maxDelta = props.maxDelta;
     this.range = props.range;
-    
-    // Misc
     this.isTapped = false;
     this.distFrom = 0;
-    this.tempoPrev = this.state.tempoCurr;
+    this.tempoPrev = props.tempo;
     this.postChangeTempo = props.onChangeTempo !== undefined  ? props.onChangeTempo : () => {};
   }
   /* istanbul ignore next */
@@ -140,6 +136,21 @@ class Tempo extends Component<IProps, IState> {
     const distNormalized = (dist / length) * this.maxDelta;
     return distNormalized;
   }
+  public init(props: IProps): void {
+    // State
+    this.setState({
+      tempoCurr: props.tempo,
+    });
+    
+    // Local variables
+    this.role = props.role;
+    this.maxDelta = props.maxDelta;
+    this.range = props.range;
+    this.isTapped = false;
+    this.distFrom = 0;
+    this.tempoPrev = props.tempo;
+    this.postChangeTempo = props.onChangeTempo !== undefined  ? props.onChangeTempo : () => {};
+  }
   /* istanbul ignore next */
   public componentWillMount(): void {
     if (this.props.inheritedSelector) {
@@ -152,22 +163,16 @@ class Tempo extends Component<IProps, IState> {
       return;
     }
 
+    if (newProps.range.from > newProps.range.to) {
+      throw new RangeError(`Range.from cannot be greater than Range.to.`);
+    }
+    if (newProps.tempo > newProps.range.to) {
+      throw new RangeError(`Tempo cannot be greater than Range.to.`);
+    }
+    if (newProps.tempo < newProps.range.from) {
+      throw new RangeError(`Tempo cannot be less than Range.from.`);
+    }
     this.init(newProps);
-    newProps.tempo !== this.props.tempo && this.changeTempo(newProps.tempo, true);
-    const updateRange = (newRange: IProps['range']) => {
-      if (this.state.tempoCurr < newRange.from) { 
-        this.setState({
-          tempoCurr: newRange.from,
-        });
-        this.tempoPrev = newRange.from;
-      } else if (this.state.tempoCurr > newRange.to) { 
-        this.setState({
-          tempoCurr: newRange.to,
-        });
-        this.tempoPrev = newRange.to;
-      }
-    };
-    updateRange(newProps.range);
   }
   public render(): React.ReactNode {
     return (

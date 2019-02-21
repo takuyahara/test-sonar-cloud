@@ -26,13 +26,17 @@
       "sounds/*": [
         "src/sounds/*"
       ],
+      "AxlMetronome/*": [
+        "src/components/AxlMetronome/*"
+      ],
       "*": [
         "*",
-        "src/*"
+        "src/components/*"
       ]
     }
   },
   "include": [
-    "src"
+    "src",
+    "stories"
   ]
 }
