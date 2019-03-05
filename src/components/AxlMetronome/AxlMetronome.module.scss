@@ -31,3 +31,19 @@
         margin-left: $counter-center-x;
     }
 }
+#noscript {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    font-size: 60px;
+    font-family: "DIN Alternate";
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+}

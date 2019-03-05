@@ -151,7 +151,11 @@ class AxlMetronome extends Component<IProps, IState> {
         <div 
           className={style.AxlMetronome} 
           data-is-ready={false} 
-        />
+        >
+          <noscript key="noscript" id={style.noscript}>
+            This app works with JavaScript.
+          </noscript>
+        </div>
       );
     }
     return (
