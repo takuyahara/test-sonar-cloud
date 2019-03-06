@@ -68,4 +68,8 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# Jest result for addon-jest
+stories/jest-test-results.json
+
+# Built storybook
 storybook-static/

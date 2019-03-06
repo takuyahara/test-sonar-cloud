@@ -30,5 +30,6 @@ module.exports = {
     __PATH_PREFIX__: "",
   },
   testURL: `http://localhost`,
-  setupFiles: ["<rootDir>/loadershim.js"]
+  setupFiles: ["<rootDir>/loadershim.js"],
+  watchPathIgnorePatterns: [`stories`]
 }

@@ -1,18 +1,23 @@
-import { configure, addDecorator } from '@storybook/react';
-import { withOptions } from '@storybook/addon-options';
-import { withNotes } from '@storybook/addon-notes';
+import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { withViewport } from '@storybook/addon-viewport';
-import { QrcodeDecorator } from './addon-qrcode';
+import { withTests } from '@storybook/addon-jest';
+import { withA11y } from '@storybook/addon-a11y';
+import results from '../stories/jest-test-results.json';
 
-// https://github.com/storybooks/storybook/tree/v4.0.0-alpha.23/addons/options
-withOptions({
-  addonPanelInRight: false
-});
-addDecorator(withNotes);
+addParameters({
+  backgrounds: [
+    { name: 'white', value: '#ffffff', default: true },
+    { name: 'light', value: '#eeeeee' },
+    { name: 'gray', value: '#cccccc' },
+    { name: 'dark', value: '#222222' },
+    { name: 'black', value: '#000000' },
+  ],
+})
 addDecorator(withKnobs);
-addDecorator(withViewport());
-addDecorator(QrcodeDecorator);
+addDecorator(withTests({
+  results,
+}));
+addDecorator(withA11y)
 
 // automatically import all files ending in *.stories.js
 const req = require.context("../stories", true, /.stories.tsx$/)
@@ -33,4 +38,4 @@ window.___navigate = pathname => {
   action("NavigateTo:")(pathname)
 }
 
-configure(loadStories, module)
+configure(loadStories, module);

@@ -1,7 +1,3 @@
 [build]
-  publish = "public/"
-  command = "yarn build"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
+  publish = "storybook-static/"
+  command = "yarn test-unwatch && yarn build-storybook"

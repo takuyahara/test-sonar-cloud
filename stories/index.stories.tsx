@@ -49,14 +49,17 @@ storiesOf('Axl Metronome', module)
     );
   }, {
     notes: {
-      markdown: [
-        `Combination of BeatAxl and Time that provides the following features:`,
-        `* Indicates current tempo and increases/decreases beat`,
-        `* Indicates remaining time by Ring`,
-        `* Click button at center to start/pause beat`,
-        `* Drag ring to change remaining time`,
-      ].join("\n"),
+      markdown: `
+Final composition that provides the following features:
+
+* Indicates current tempo and increases/decreases beat
+* Indicates remaining time by Ring
+* Click button at center to start/pause beat
+* Drag ring to change remaining time
+* Drag background to change beginning/ending tempo
+      `,
     },
+    jest: "AxlMetronome.test.tsx",
   });
 storiesOf('Counter', module)
   .add('Counter', () => {
@@ -74,14 +77,16 @@ storiesOf('Counter', module)
     );
   }, {
     notes: {
-      markdown: [
-        `Combination of BeatAxl and Time that provides the following features:`,
-        `* Indicates current tempo and increases/decreases beat`,
-        `* Indicates remaining time by Ring`,
-        `* Click button at center to start/pause beat`,
-        `* Drag ring to change remaining time`,
-      ].join("\n"),
+      markdown: `
+Combination of BeatAxl and Time that provides the following features:
+
+* Indicates current tempo and increases/decreases beat
+* Indicates remaining time by Ring
+* Click button at center to start/pause beat
+* Drag ring to change remaining time
+      `,
     },
+    jest: "Counter.test.tsx",
   })
   .add('BeatAxl', () => {
     const remaining = number('Remaining time', 30);
@@ -97,7 +102,12 @@ storiesOf('Counter', module)
       />
     );
   }, {
-    notes: `Indicates current tempo and increases/decreases beat.`,
+    notes: {
+      markdown: `
+Indicates current tempo and increases/decreases beat.
+      `,
+    },
+    jest: "BeatAxl.test.tsx",
   })
   .add('Beat', () => {
     const tempo = number('Tempo', 90);
@@ -108,7 +118,12 @@ storiesOf('Counter', module)
       />
     );
   }, {
-    notes: `Indicates current tempo and beats in consistent tempo.`,
+    notes: {
+      markdown: `
+Indicates current tempo and beats in consistent tempo.
+      `,
+    },
+    jest: "Beat.test.tsx",
   })
   .add('Time', () => {
     const remaining = number('Remaining time in seconds', 10);
@@ -119,11 +134,14 @@ storiesOf('Counter', module)
       />
     );
   }, {
-    notes: [
-      `Combination of Indicator and Ring.`,
-      `Click Indicator to start/stop counting time. Ring also indicates remaining time.`,
-      `Click and drag Ring to change time to count. Indicator stops counting and value will be reflected immediately.current!.`,
-    ].join("\n"),
+    notes: {
+      markdown: `
+Combination of Indicator and Ring.
+Click Indicator to start/stop counting time. Ring also indicates remaining time.
+Click and drag Ring to change time to count. Indicator stops counting and value will be reflected immediately.current!.
+      `,
+    },
+    jest: "Time.test.tsx",
   })
   .add('Indicator', () => {
     const remaining = number('Remaining time in seconds', 900);
@@ -141,10 +159,13 @@ storiesOf('Counter', module)
       />
     );
   }, {
-    notes: [
-      `Button to start/stop counting time and to indicate remaining time.`,
-      `Click to start/stop counting. When counting completed value turns back to original one.`,
-    ].join("\n"),
+    notes: {
+      markdown: `
+Button to start/stop counting time and to indicate remaining time.
+Click to start/stop counting. When counting completed value turns back to original one.
+      `,
+    },
+    jest: "Indicator.test.tsx",
   })
   .add('Stepped Ring', () => {
     const step = number('Step', 10, {
@@ -172,10 +193,13 @@ storiesOf('Counter', module)
       />
     );
   }, {
-    notes: [
-      `Ring to set and to indicate remaining time.`,
-      `Click and drag is available.`,
-    ].join("\n"),
+    notes: {
+      markdown: `
+Ring to set and to indicate remaining time.
+Click and drag is available.
+      `,
+    },
+    jest: "RingStepped.test.tsx",
   })
   .add('Non-stepped Ring', () => {
     button('reset()', () => {
@@ -193,10 +217,13 @@ storiesOf('Counter', module)
       />
     );
   }, {
-    notes: [
-      `Ring to set and to indicate remaining time.`,
-      `Click and drag is available.`,
-    ].join("\n"),
+    notes: {
+      markdown: `
+Ring to set and to indicate remaining time.
+Click and drag is available.
+      `,
+    },
+    jest: "Ring.test.tsx",
   });
 storiesOf('Tempo', module)
   .add('selector', () => {
@@ -223,7 +250,12 @@ storiesOf('Tempo', module)
         />
       );
     }, {
-      notes: `Buttons to set beginning/final tempo.`,
+      notes: {
+        markdown: `
+Buttons to set beginning/final tempo.
+        `,
+      },
+      jest: "TempoSelector.test.tsx",
     },
   )
   .add('from', () => {
@@ -246,10 +278,13 @@ storiesOf('Tempo', module)
         />
       );
     }, {
-      notes: [
-        `A button to set beginning tempo.`,
-        `Slide to change value.`,
-      ].join("\n"),
+      notes: {
+        markdown: `
+A button to set beginning tempo.
+Slide to change value.
+        `,
+      },
+      jest: "Tempo.test.tsx",
     },
   )
   .add('to', () => {
@@ -272,9 +307,12 @@ storiesOf('Tempo', module)
         />
       );
     }, {
-      notes: [
-        `A button to set beginning tempo.`,
-        `Slide to change value.`,
-      ].join("\n"),
+      notes: {
+        markdown: `
+A button to set beginning tempo.
+Slide to change value.
+        `,
+      },
+      jest: "Tempo.test.tsx",
     },
   );
