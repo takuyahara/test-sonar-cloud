@@ -3,6 +3,7 @@ import SEO from "../components/seo";
 import AxlMetronome from '../components/AxlMetronome/AxlMetronome';
 import bugsnag from '@bugsnag/js';
 import bugsnagReact from '@bugsnag/plugin-react';
+import { version as appVersion } from '../../package.json';
 
 const NODE_CONFIG = JSON.parse(process.env.NODE_CONFIG!);
 const defaultConfig = NODE_CONFIG.AxlMetronome;
@@ -33,7 +34,7 @@ const IndexPage = () => (
 if (process.env.NODE_ENV === 'production') {
   const bugsnagClient = bugsnag({
     apiKey: bsConfig.API,
-    appVersion: process.env.npm_package_version,
+    appVersion,
   });
   bugsnagClient.use(bugsnagReact, React);
 }
