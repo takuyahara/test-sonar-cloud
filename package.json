@@ -23,7 +23,7 @@
     "gatsby-plugin-sharp": "^2.0.28",
     "gatsby-plugin-typescript": "^2.0.11",
     "gatsby-source-filesystem": "^2.0.24",
-    "gatsby-transformer-sharp": "^2.1.14",
+    "gatsby-transformer-sharp": "^2.1.17",
     "node-sass": "^4.11.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-loader": "^3.0.0",
