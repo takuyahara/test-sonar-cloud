@@ -14,7 +14,7 @@
     "config": "^3.0.1",
     "configcat-node": "^2.1.9",
     "css-loader": "^2.1.1",
-    "gatsby": "^2.1.32",
+    "gatsby": "^2.1.33",
     "gatsby-image": "^2.0.33",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
