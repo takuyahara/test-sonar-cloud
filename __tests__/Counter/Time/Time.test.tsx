@@ -64,8 +64,8 @@ describe('Ring', () => {
     };
     sinon.replace(Ring.prototype as any, 'getR', () => 145);
     sinon.replace(Element.prototype as any, 'getBoundingClientRect', () => ({
-      x: 0, 
-      y: 0, 
+      left: 0, 
+      top: 0, 
       width: 300, 
       height: 300, 
     }));

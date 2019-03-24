@@ -13,8 +13,9 @@
     "classnames": "^2.2.6",
     "config": "^3.0.1",
     "configcat-node": "^2.1.9",
+    "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
-    "gatsby": "^2.1.33",
+    "gatsby": "^2.1.32",
     "gatsby-image": "^2.0.33",
     "gatsby-plugin-manifest": "^2.0.24",
     "gatsby-plugin-offline": "^2.0.25",
@@ -49,9 +50,15 @@
     "tslint": "tslint -p tsconfig.json",
     "stylelint": "stylelint 'src/**/*.scss'",
     "lint-staged": "lint-staged",
-    "pre-commit": "yarn lint-staged && yarn test-unwatch",
+    "pre-commit": "yarn lint-staged && yarn test-unwatch && yarn test-e2e-dev-pre-commit",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "cy-open": "cross-env BABEL_ENV=test cypress open",
+    "cy-run-dev": "cross-env BABEL_ENV=test cypress run",
+    "cy-run-ci": "cross-env BABEL_ENV=test cypress run --record --key $CYPRESS_KEY",
+    "test-e2e-dev": "start-server-and-test start http://localhost:8000 cy-open",
+    "test-e2e-dev-pre-commit": "start-server-and-test start http://localhost:8000 cy-run-dev",
+    "test-e2e-ci": "start-server-and-test start http://localhost:8000 cy-run-ci"
   },
   "husky": {
     "hooks": {
@@ -79,6 +86,7 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@cypress/webpack-preprocessor": "^4.0.3",
     "@storybook/addon-a11y": "^5.0.1",
     "@storybook/addon-actions": "^5.0.1",
     "@storybook/addon-backgrounds": "^5.0.1",
@@ -99,6 +107,7 @@
     "babel-jest": "^24.5.0",
     "babel-loader": "^8.0.5",
     "babel-preset-gatsby": "^0.1.9",
+    "cypress": "3.2.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.1",
     "enzyme-to-json": "^3.3.5",
@@ -108,6 +117,7 @@
     "lint-staged": "^8.1.5",
     "qrcode": "^1.3.3",
     "sinon": "^7.2.7",
+    "start-server-and-test": "^1.7.11",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "tslint": "^5.14.0",
