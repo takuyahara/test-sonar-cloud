@@ -17,7 +17,7 @@ class RingStepped extends Ring<IProps, IState> {
   protected mouseMove(e: React.MouseEvent | React.TouchEvent): void {
     const isMouseEvent = e.type.substr(0, 5) === 'mouse';
     isMouseEvent && e.preventDefault();
-    if (!this.state.isTapped) {
+    if (!this.isTapped) {
       return;
     }
 
@@ -38,9 +38,12 @@ class RingStepped extends Ring<IProps, IState> {
     const progressStepped = Math.floor((progress * this.step)) / this.step;
     this.setProgress(progressStepped);
     this.postMouseDown(e);
-    this.setState({
-      isTapped: true,
-    });
+    this.isTapped = true;
+    if (isMouseEvent) {
+      this.setState({
+        isBubbled: true,
+      });
+    }
   }
   /* istanbul ignore next */
   public init(props: IProps): void {

@@ -12,11 +12,12 @@ export interface IProps {
 }
 export interface IState {
   strokeDasharray: string;
-  isTapped: boolean;
+  isBubbled: boolean;
 }
 class Ring<P extends IProps = IProps, S extends IState = IState> extends Component<P, S> {
   // Initialize in init()
   protected progress: number = 0;
+  protected isTapped: boolean = false;
   protected postMouseMove!: (e: React.MouseEvent | React.TouchEvent) => void;
   protected postMouseDown!: (e: React.MouseEvent | React.TouchEvent) => void;
   protected postMouseUp!: (e: React.MouseEvent | React.TouchEvent) => void;
@@ -29,7 +30,7 @@ class Ring<P extends IProps = IProps, S extends IState = IState> extends Compone
     super(props);
     this.state = {
       strokeDasharray: "",
-      isTapped: false,
+      isBubbled: false,
     } as S;
 
     // Ref
@@ -56,8 +57,8 @@ class Ring<P extends IProps = IProps, S extends IState = IState> extends Compone
   protected getRatio(clientX: number, clientY: number): number {
     const refRing = this.refRing.current!;
     const ringGeometry = this.getBoundingClientRect(refRing);
-    const centerX = ringGeometry.x + ringGeometry.width / 2;
-    const centerY = ringGeometry.y + ringGeometry.height / 2;
+    const centerX = ringGeometry.left + ringGeometry.width / 2;
+    const centerY = ringGeometry.top + ringGeometry.height / 2;
     const dist = {
       x: clientX - centerX,
       y: clientY - centerY,
@@ -70,7 +71,7 @@ class Ring<P extends IProps = IProps, S extends IState = IState> extends Compone
   protected mouseMove(e: React.MouseEvent | React.TouchEvent): void {
     const isMouseEvent = e.type.substr(0, 5) === 'mouse';
     isMouseEvent && e.preventDefault();
-    if (!this.state.isTapped) {
+    if (!this.isTapped) {
       return;
     }
 
@@ -89,18 +90,24 @@ class Ring<P extends IProps = IProps, S extends IState = IState> extends Compone
     const progress = this.getRatio(clientX, clientY);
     this.setProgress(progress);
     this.postMouseDown(e);
-    this.setState({
-      isTapped: true,
-    });
+    this.isTapped = true;
+    if (isMouseEvent) {
+      this.setState({
+        isBubbled: true,
+      });
+    }
   }
   protected mouseUp(e: React.MouseEvent | React.TouchEvent): void {
     const isMouseEvent = e.type.substr(0, 5) === 'mouse';
     isMouseEvent && e.preventDefault();
 
     this.postMouseUp(e);
-    this.setState({
-      isTapped: false,
-    });
+    this.isTapped = false;
+    if (isMouseEvent) {
+      this.setState({
+        isBubbled: false,
+      });
+    }
   }
   /* istanbul ignore next */
   protected getR(svgObject: SVGElement): number {
@@ -177,7 +184,7 @@ class Ring<P extends IProps = IProps, S extends IState = IState> extends Compone
         <div 
           className={style.globalTapArea} 
           data-testid="ring-global-taparea" 
-          data-is-bubbled={this.state.isTapped} 
+          data-is-bubbled={this.state.isBubbled} 
           onMouseMove={this.mouseMove} 
           onMouseUp={this.mouseUp} 
         />

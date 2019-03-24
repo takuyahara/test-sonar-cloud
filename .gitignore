@@ -73,3 +73,7 @@ stories/jest-test-results.json
 
 # Built storybook
 storybook-static/
+
+# Cypress files
+cypress/screenshots/
+cypress/videos/

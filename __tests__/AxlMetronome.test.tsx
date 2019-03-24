@@ -1,3 +1,7 @@
+// This is a test for production app.
+// Black-box testing is responsible for Cypress and this test is only
+// responsible for what Cypress cannot test. Don't write redundant test.
+
 import React from 'react';
 import { configure, mount, ReactWrapper } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -43,8 +47,8 @@ describe('Axl Metronome', () => {
     });
     sinon.replace(Ring.prototype as any, 'getR', () => 145);
     sinon.replace(Element.prototype as any, 'getBoundingClientRect', () => ({
-      x: 0, 
-      y: 0, 
+      left: 0, 
+      top: 0, 
       width: 300, 
       height: 300, 
     }));
@@ -125,6 +129,7 @@ describe('Axl Metronome', () => {
         });
         axlMetronome.find(sel('temposelector-from')).simulate('mouseup');
       }
+      expect(axlMetronomeInstance.getStatus()).toBe(Status.Stopped);
     });
 
     it('swipe tempo.to 10 times => tempo.to is in range', () => {
@@ -141,6 +146,7 @@ describe('Axl Metronome', () => {
         });
         axlMetronome.find(sel('temposelector-to')).simulate('mouseup');
       }
+      expect(axlMetronomeInstance.getStatus()).toBe(Status.Stopped);
     });
 
     describe('tempo.from < tempo.to', () => {
