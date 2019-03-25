@@ -1,0 +1,3 @@
+[build]
+  publish = "storybook-static/"
+  command = "yarn test-unwatch && yarn build-storybook" # yarn test-unwatch is needed to make test result loaded by addon-jest

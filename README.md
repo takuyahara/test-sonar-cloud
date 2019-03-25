@@ -5,7 +5,7 @@
   Axl Metronome
 </h1>
 
-[![Build Status](https://travis-ci.com/takuyahara/axl-metronome.svg?branch=master)](https://travis-ci.com/takuyahara/axl-metronome) [![codecov](https://codecov.io/gh/takuyahara/axl-metronome/branch/master/graph/badge.svg)](https://codecov.io/gh/takuyahara/axl-metronome) [![CodeFactor](https://www.codefactor.io/repository/github/takuyahara/axl-metronome/badge)](https://www.codefactor.io/repository/github/takuyahara/axl-metronome) [![Known Vulnerabilities](https://snyk.io/test/github/takuyahara/axl-metronome/badge.svg)](https://snyk.io/test/github/takuyahara/axl-metronome) [![Greenkeeper badge](https://badges.greenkeeper.io/takuyahara/axl-metronome.svg)](https://greenkeeper.io/) [![Netlify Status](https://api.netlify.com/api/v1/badges/def4e382-4602-4e1b-b86c-d408e1c683a0/deploy-status)](https://app.netlify.com/sites/axl-metronome/deploys)
+[![Build Status](https://travis-ci.com/takuyahara/axl-metronome.svg?branch=master)](https://travis-ci.com/takuyahara/axl-metronome) [![codecov](https://codecov.io/gh/takuyahara/axl-metronome/branch/master/graph/badge.svg)](https://codecov.io/gh/takuyahara/axl-metronome) [![CodeFactor](https://www.codefactor.io/repository/github/takuyahara/axl-metronome/badge)](https://www.codefactor.io/repository/github/takuyahara/axl-metronome) [![Known Vulnerabilities](https://snyk.io/test/github/takuyahara/axl-metronome/badge.svg)](https://snyk.io/test/github/takuyahara/axl-metronome) [![Greenkeeper badge](https://badges.greenkeeper.io/takuyahara/axl-metronome.svg)](https://greenkeeper.io/) [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat)](https://cypress.io) [![Netlify Status](https://api.netlify.com/api/v1/badges/def4e382-4602-4e1b-b86c-d408e1c683a0/deploy-status)](https://app.netlify.com/sites/axl-metronome/deploys)
 
 Axl Metronome is a simple metronome for musicians who want to concentrate on practice. It increases or decreases tempo automatically and frees to be disturbed to change tempo.
 
@@ -122,6 +122,14 @@ Keeping app secure is important but how to do it? Do I need to scan project peri
 
 One of the purpose of code review is to keep code readable. CodeFactor helped me by measuring quality of code and advising how to make it better. I like its fix suggestion; fix can be performed easily by a click that creates PR which fixes code automatically.
 
+### Cypress
+> The web has evolved. 
+> Finally, testing has too.
+
+>> Fast, easy and reliable testing for anything that runs in a browser.
+
+Ideal e2e testing tool for Chrome which involves lodash, jQuery, Sinon etc. Using two testing tools I learned how they differ; Cypress is for black-box testing and Jest is for white-box testing. I love Cypress' movie recording feature that helps me observing behavior during testing and reproducing error when occurred.
+
 ## Packages
 
 ### Storybook
@@ -166,6 +174,9 @@ Keeping history clean and proper is important to retain traceability. I learned 
 
 #### git reflog / git reset
 They saved me a lot in case of mal- commit/merge/rebase.
+
+### git-flow (AVH Edition)
+Helpful plugin to base development on [a successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/). When installing this I newly learned bash completion and also installed git-flow-completion which turned typing blazing fast.
 
 ## My contributions
 Here is a list of the issue I found, reported and contributed during development.
