@@ -2,33 +2,11 @@ language: node_js
 dist: trusty
 node_js:
 - 11.1.0
-before_install:
-- yarn global add codecov snyk greenkeeper-lockfile@1
 before_script:
-- greenkeeper-lockfile-update
 - yarn lint-staged
 - yarn test-unwatch
-- yarn test-e2e-ci
 script:
-- yarn coverage
 - sonar-scanner
-after_script:
-# Prepare for GitHub
-- openssl aes-256-cbc -K $encrypted_091c59dca5d1_key -iv $encrypted_091c59dca5d1_iv -in ./id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- git config --global user.email "h.taku86@gmail.com"
-- git config --global user.name "takuyahara"
-- git config --global url."git@github.com:".insteadOf "https://github.com/"
-# Build Storybook
-- git checkout -b Storybook master
-- mv netlify.storybook.toml netlify.toml
-- git add .
-- git commit -m "$TRAVIS_COMMIT_MESSAGE"
-- git push -u origin Storybook --force
-# Misc
-- greenkeeper-lockfile-upload
-- codecov
 addons:
   sonarcloud:
     organization: "test-sonar-cloud	" # the key of the org you chose at step #3
