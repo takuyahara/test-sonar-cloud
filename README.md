@@ -5,7 +5,7 @@
   Axl Metronome
 </h1>
 
-[![Build Status](https://travis-ci.com/takuyahara/axl-metronome.svg?branch=master)](https://travis-ci.com/takuyahara/axl-metronome) [![codecov](https://codecov.io/gh/takuyahara/axl-metronome/branch/master/graph/badge.svg)](https://codecov.io/gh/takuyahara/axl-metronome) [![CodeFactor](https://www.codefactor.io/repository/github/takuyahara/axl-metronome/badge)](https://www.codefactor.io/repository/github/takuyahara/axl-metronome) [![Known Vulnerabilities](https://snyk.io/test/github/takuyahara/axl-metronome/badge.svg)](https://snyk.io/test/github/takuyahara/axl-metronome) [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat)](https://cypress.io) [![Netlify Status](https://api.netlify.com/api/v1/badges/def4e382-4602-4e1b-b86c-d408e1c683a0/deploy-status)](https://app.netlify.com/sites/axl-metronome/deploys)
+[![Build Status](https://travis-ci.com/takuyahara/test-sonar-cloud.svg?branch=master)](https://travis-ci.com/takuyahara/test-sonar-cloud) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=takuyahara_test-sonar-cloud&metric=coverage)](https://sonarcloud.io/dashboard?id=takuyahara_test-sonar-cloud) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=takuyahara_test-sonar-cloud&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=takuyahara_test-sonar-cloud) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=takuyahara_test-sonar-cloud&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=takuyahara_test-sonar-cloud) 
 
 Axl Metronome is a simple metronome for musicians who want to concentrate on practice. It increases or decreases tempo automatically and frees to be disturbed to change tempo.
 
