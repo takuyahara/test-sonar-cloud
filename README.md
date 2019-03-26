@@ -5,7 +5,7 @@
   Axl Metronome
 </h1>
 
-[![Build Status](https://travis-ci.com/takuyahara/axl-metronome.svg?branch=master)](https://travis-ci.com/takuyahara/axl-metronome) [![codecov](https://codecov.io/gh/takuyahara/axl-metronome/branch/master/graph/badge.svg)](https://codecov.io/gh/takuyahara/axl-metronome) [![CodeFactor](https://www.codefactor.io/repository/github/takuyahara/axl-metronome/badge)](https://www.codefactor.io/repository/github/takuyahara/axl-metronome) [![Known Vulnerabilities](https://snyk.io/test/github/takuyahara/axl-metronome/badge.svg)](https://snyk.io/test/github/takuyahara/axl-metronome) [![Greenkeeper badge](https://badges.greenkeeper.io/takuyahara/axl-metronome.svg)](https://greenkeeper.io/) [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat)](https://cypress.io) [![Netlify Status](https://api.netlify.com/api/v1/badges/def4e382-4602-4e1b-b86c-d408e1c683a0/deploy-status)](https://app.netlify.com/sites/axl-metronome/deploys)
+[![Build Status](https://travis-ci.com/takuyahara/axl-metronome.svg?branch=master)](https://travis-ci.com/takuyahara/axl-metronome) [![codecov](https://codecov.io/gh/takuyahara/axl-metronome/branch/master/graph/badge.svg)](https://codecov.io/gh/takuyahara/axl-metronome) [![CodeFactor](https://www.codefactor.io/repository/github/takuyahara/axl-metronome/badge)](https://www.codefactor.io/repository/github/takuyahara/axl-metronome) [![Known Vulnerabilities](https://snyk.io/test/github/takuyahara/axl-metronome/badge.svg)](https://snyk.io/test/github/takuyahara/axl-metronome) [![Cypress.io tests](https://img.shields.io/badge/cypress.io-tests-green.svg?style=flat)](https://cypress.io) [![Netlify Status](https://api.netlify.com/api/v1/badges/def4e382-4602-4e1b-b86c-d408e1c683a0/deploy-status)](https://app.netlify.com/sites/axl-metronome/deploys)
 
 Axl Metronome is a simple metronome for musicians who want to concentrate on practice. It increases or decreases tempo automatically and frees to be disturbed to change tempo.
 
@@ -63,12 +63,14 @@ After using this I can't imagine development without CI/CD. CI/CD ensures that t
 
 I every time take care of coverage. When I see my code on GitHub, browser extension shows code highlighted and make me aware of coverage.
 
-### Greenkeeper
-> AUTOMATED DEPENDENCY MANAGEMENT
+### ~~Greenkeeper~~
+> ~~AUTOMATED DEPENDENCY MANAGEMENT~~
 
->> Get safety & consistency with real-time monitoring and automatic updates for npm dependencies
+>> ~~Get safety & consistency with real-time monitoring and automatic updates for npm dependencies~~
 
-I think it's not a good idea to update package immediately because it may destruct app. It only must be done if vulnerability has found and it's what Snyk does. The reason that I even use Greenkeeper is for performance improvement; package update may improve performance. When Greenkeeper detects package update I test whether it improves performance and if it does I apply update even if there is no vulnerability.
+~~I think it's not a good idea to update package immediately because it may destruct app. It only must be done if vulnerability has found and it's what Snyk does. The reason that I even use Greenkeeper is for performance improvement; package update may improve performance. When Greenkeeper detects package update I test whether it improves performance and if it does I apply update even if there is no vulnerability.~~
+
+Took down because I receive too much update which seems not proper. I decided to update dependencies on local with `ncu -u`.
 
 ### Codecov
 > Develop healthier code.
