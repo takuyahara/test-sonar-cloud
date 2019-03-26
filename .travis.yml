@@ -7,6 +7,7 @@ before_script:
 # - yarn stylelint
 - yarn test-unwatch
 script:
+- yarn coverage
 - sonar-scanner
 addons:
   sonarcloud:
