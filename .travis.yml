@@ -3,8 +3,8 @@ dist: trusty
 node_js:
 - 11.1.0
 before_script:
-- yarn tslint
-- yarn stylelint
+# - yarn tslint
+# - yarn stylelint
 - yarn test-unwatch
 script:
 - sonar-scanner
