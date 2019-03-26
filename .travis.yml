@@ -3,10 +3,11 @@ dist: trusty
 node_js:
 - 11.1.0
 before_script:
-- yarn lint-staged
+- yarn tslint
+- yarn stylelint
 - yarn test-unwatch
 script:
-- sonar-scanner -X
+- sonar-scanner
 addons:
   sonarcloud:
     organization: "takuyahara-github" # the key of the org you chose at step #3
