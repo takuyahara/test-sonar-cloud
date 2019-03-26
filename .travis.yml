@@ -1,4 +1,5 @@
 language: node_js
+dist: trusty
 node_js:
 - 11.1.0
 before_install:
@@ -10,6 +11,7 @@ before_script:
 - yarn test-e2e-ci
 script:
 - yarn coverage
+- sonar-scanner
 after_script:
 # Prepare for GitHub
 - openssl aes-256-cbc -K $encrypted_091c59dca5d1_key -iv $encrypted_091c59dca5d1_iv -in ./id_rsa.enc -out ~/.ssh/id_rsa -d
@@ -27,9 +29,11 @@ after_script:
 # Misc
 - greenkeeper-lockfile-upload
 - codecov
-notifications:
-  slack:
-    secure: aIX+gBgrSuWWZhfAbMUPnSfHBDRhXj93RGOy+q+lYsvLiLIyMv0T/pwdra1OBkgQDkFef+4wboFtW24xhSFfsIY6C6AGzWPvFDJE9K+OlOPcRj4L2qByS7YYGan8AzdOCX4q2TClbvM59eBoLd3t+lT7PjBrAfHYWgBzFBfKTG8e4qweawSQhxZ2cxDmY9OftLjU3iMPF+CNMrzPfZPnWVDW9UeLqTR62crNaoW3120GLzniLinDNCCnWxUhbdxn+4fueaU4h1GzqIiGzLXIGgYLswvA0wGDALYtz9c0FYCCRogxD9Xl2LTPREgVhU2Ex05oHOBqpwO80tQzim6KEQ92jRPhwqhCkxFXV/0ZtvufB8+a3wcQTn+HbkUJ12ZDAMUicgBUjy4YJ9gM9AmID2RsAvr0G3VqivISqkeCtnSinmlDVY7MW24ACoil4MnWy5CxYrABFCXyxaeIq5XtZ3EzmWXdG6BXgxCyx4fd2Pvov1OOHhXiHHgLNumqizAyRxoLd5yy28zxnRwFeeNqCB6GVU5Qr2lDh01uNTUDgNMoaJ8FVkHfOF9eGwhEOT/6UCRINzFSXex01x2tasyPxczY4BCWNUXxhLv2hBcBV53+G8xKlmgzoQDh/aFCqIe+5keJ2Or0OWlZ9hpQWWkb0qyCvBl/reS+4ON+fjRy4aQ=
+addons:
+  sonarcloud:
+    organization: "test-sonar-cloud	" # the key of the org you chose at step #3
+    token:
+      secure: d/nLjP6cXi4ijjee6WPQRKFKa3HoVhX6wZA1EHjRLYtzTJBFxLhXIbPChNhATSlLVg0vCBxiRTk1vUts0zYLErdBlacmWVyh5jf3V2Z1N+svdvYUdX1ihsGQWb74vAiRfpsBdtf0z3MmbkNqttFYKvdxqTSWKpEPsbuSeW0VFE2fLClHI4Tj7EtJ+RsiH7celJ+DOdbibaI9ZKupKxYDeV/mT3WfO00WOoYs9X8c39x9qDyYS+Ts4B6A2XKLffDo/w2JPL2QGrmwRTIPVbGpCmjTpBIJvye4uwu5o7BNDyQISQsldgJranGI710cGcXnsS3kdGZ92bEMjthtXQ+eyxJBqGGHWo7m1euW4xilroTyq7mrQ2aEssCVo/sE1TJkqngRe50OawugOHnS0Vx/sJT5v5mmEJd8pUrrzMmegC6JjE+Rkw0EUpB8buZcoyhUsoY7k7RTUFY8SXNdnofhm+DaayYO0LOPS4XErBBT48cz6vSs8pZxOBU4cwQlgY4/G+qkExK7N3UkLkSp4i0bFOwR/kEIhY0h6jflbmHyNFFGgG2rKu9J9dYEtOU+EqUHFE4cZJPUxv15Bckl2gMtiySFoK+B/0oV+SRwaGfPAEzrrk+KcPmDuVNNh8CTDBTHGWXCp5lflCKxrqBSCPBWnzqggKufbXiV2IgqGoYiIOk= # encrypted value of your token
 env:
   global:
   - secure: gAd4vnkSSaR2M6IP5/EPtw6TP+9YmrEHkkTt2MiNZrEO7EM8x5InQvTUrQfBFO1BP7bVyz9/gHE5eb1mTKWJR0/Xk837Cs2WUP53I5xNHihDHCJCs0xTai7P8Y/GnnJgNV6wOZALUnF8qOALYBf29h7aa0CsRDB/Qfvc7Z7Ev+pGB8bA2WUgFszktqbzhTVVNUGN+5jFDq7zwE+abEvg5cfmYZbxrjQHrXgIJzqhVfdRTqv1MueS2+dGAh1sEuebgIvUNstbZyLxB1oDnj1Yqn2vyUwhYUhqEuWmyziTvixupkr9pC79vQ6zHnyDirxHe1tRPsg8nDKvMH8zgD50P5wiv5dMemKrQ/iGB/HX/V1W0GYV7too8bPiENLdxvltP+bdy6v+Q0YKuh2wVJ70okJbmBLW3FwdXYuLs5ZjsLJiF7Jz89jKsSaVV7qn4+bA4OUnhBLDYo7q4bJRbZyBt+LPAaSAbHpusnN2k3qenjJDqJpK1AZMZ/HUUtgo+ExJMKdnb8xzACaBt+alo27uTmQ0j+C3uCy+NcwVyMA8Fhjjr6i63KI+qwFmtE4WWYr99De6J7Sz/Lo2qEUyI6dpHk1PuY7QIKsG5STJDAH89uy80r8kFA0KWQVjb+1ytsYeYXWVfSONPiGz10OmsAaDwZdoRjasjWIfY/VImNrFGCs=

@@ -1,0 +1,7 @@
+organization=takuyahara-github
+projectKey=takuyahara_test-sonar-cloud
+serverUrl=https://sonarcloud.io
+serverVersion=7.7.0.23020
+dashboardUrl=https://sonarcloud.io/dashboard?id=takuyahara_test-sonar-cloud
+ceTaskId=AWm67gNAHcDGtXNl6AeD
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWm67gNAHcDGtXNl6AeD
