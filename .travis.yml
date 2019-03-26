@@ -9,7 +9,7 @@ script:
 - sonar-scanner
 addons:
   sonarcloud:
-    organization: "takuyahara-github	" # the key of the org you chose at step #3
+    organization: "takuyahara-github" # the key of the org you chose at step #3
     token:
       secure: d/nLjP6cXi4ijjee6WPQRKFKa3HoVhX6wZA1EHjRLYtzTJBFxLhXIbPChNhATSlLVg0vCBxiRTk1vUts0zYLErdBlacmWVyh5jf3V2Z1N+svdvYUdX1ihsGQWb74vAiRfpsBdtf0z3MmbkNqttFYKvdxqTSWKpEPsbuSeW0VFE2fLClHI4Tj7EtJ+RsiH7celJ+DOdbibaI9ZKupKxYDeV/mT3WfO00WOoYs9X8c39x9qDyYS+Ts4B6A2XKLffDo/w2JPL2QGrmwRTIPVbGpCmjTpBIJvye4uwu5o7BNDyQISQsldgJranGI710cGcXnsS3kdGZ92bEMjthtXQ+eyxJBqGGHWo7m1euW4xilroTyq7mrQ2aEssCVo/sE1TJkqngRe50OawugOHnS0Vx/sJT5v5mmEJd8pUrrzMmegC6JjE+Rkw0EUpB8buZcoyhUsoY7k7RTUFY8SXNdnofhm+DaayYO0LOPS4XErBBT48cz6vSs8pZxOBU4cwQlgY4/G+qkExK7N3UkLkSp4i0bFOwR/kEIhY0h6jflbmHyNFFGgG2rKu9J9dYEtOU+EqUHFE4cZJPUxv15Bckl2gMtiySFoK+B/0oV+SRwaGfPAEzrrk+KcPmDuVNNh8CTDBTHGWXCp5lflCKxrqBSCPBWnzqggKufbXiV2IgqGoYiIOk= # encrypted value of your token
 env:
