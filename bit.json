@@ -1,6 +1,15 @@
 {
-    "env": {},
+    "env": {
+        "compiler": "bit.envs/compilers/typescript@0.0.5"
+    },
     "dependencies": {},
     "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "resolveModules": {
+        "aliases": {
+            "utils": "src/utils",
+            "sounds": "src/sounds",
+            "AxlMetronome": "src/components/AxlMetronome"
+        }
+    }
 }

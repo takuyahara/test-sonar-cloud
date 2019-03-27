@@ -2,6 +2,7 @@
   "name": "axl-metronome",
   "version": "1.0.0",
   "dependencies": {
+    "@bit/takuyahara.test-sonar-cloud.beat-axl": "^0.1.0",
     "@bugsnag/js": "^6.0.0",
     "@bugsnag/plugin-react": "^6.0.0",
     "@types/classnames": "^2.2.7",

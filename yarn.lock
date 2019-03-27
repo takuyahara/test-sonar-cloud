@@ -932,6 +932,15 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@bit/takuyahara.test-sonar-cloud.beat-axl@^0.1.0":
+  version "0.1.0"
+  resolved "https://node.bit.dev/takuyahara.test-sonar-cloud.beat-axl/-/takuyahara.test-sonar-cloud.beat-axl-0.1.0.tgz#758f99c5416c00b3e511cded30428de7e10d693b"
+  integrity sha1-dY+ZxUFsALPlEc3tMEKN5+ENaTs=
+  dependencies:
+    classnames "^2.2.6"
+    lodash "4.17.11"
+    react "^16.8.4"
+
 "@bugsnag/browser@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@bugsnag/browser/-/browser-6.0.0.tgz#d6e55e05d2f7cfa1f729ac5143b60e4a715122bf"
