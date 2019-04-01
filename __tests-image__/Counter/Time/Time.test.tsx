@@ -11,6 +11,9 @@ describe(`Time`, () => {
     await page.emulate(iPhone);
     await page.goto(`http://localhost:6006/iframe.html?id=counter--time`);
   });
+  afterEach(async () => {
+    await browser.close();
+  });
 
   it(`Default`, async () => {
     const image = await page.screenshot();
