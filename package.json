@@ -51,7 +51,7 @@
     "stylelint": "stylelint 'src/**/*.scss'",
     "lint-staged": "lint-staged",
     "pre-commit": "yarn lint-staged && yarn test-unwatch && yarn test-image-ci && yarn test-e2e-dev-pre-commit",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --ci",
     "build-storybook": "build-storybook",
     "cy-open": "cross-env BABEL_ENV=test cypress open",
     "cy-run-dev": "cross-env BABEL_ENV=test cypress run",
