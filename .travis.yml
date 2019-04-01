@@ -2,10 +2,20 @@ language: node_js
 dist: trusty
 node_js:
 - 11.1.0
+addons:
+  apt:
+    packages:
+      - libnss3
+before_install:
+- "sysctl kernel.unprivileged_userns_clone=1"
+- "export DISPLAY=:99.0"
+- "sh -e /etc/init.d/xvfb start"
 before_script:
 # - yarn tslint
 # - yarn stylelint
-- yarn coverage
+# - yarn coverage
+- yarn test-unwatch
+- yarn test-image-ci
 script:
 - sonar-scanner
 addons:
@@ -16,3 +26,6 @@ addons:
 env:
   global:
   - secure: gAd4vnkSSaR2M6IP5/EPtw6TP+9YmrEHkkTt2MiNZrEO7EM8x5InQvTUrQfBFO1BP7bVyz9/gHE5eb1mTKWJR0/Xk837Cs2WUP53I5xNHihDHCJCs0xTai7P8Y/GnnJgNV6wOZALUnF8qOALYBf29h7aa0CsRDB/Qfvc7Z7Ev+pGB8bA2WUgFszktqbzhTVVNUGN+5jFDq7zwE+abEvg5cfmYZbxrjQHrXgIJzqhVfdRTqv1MueS2+dGAh1sEuebgIvUNstbZyLxB1oDnj1Yqn2vyUwhYUhqEuWmyziTvixupkr9pC79vQ6zHnyDirxHe1tRPsg8nDKvMH8zgD50P5wiv5dMemKrQ/iGB/HX/V1W0GYV7too8bPiENLdxvltP+bdy6v+Q0YKuh2wVJ70okJbmBLW3FwdXYuLs5ZjsLJiF7Jz89jKsSaVV7qn4+bA4OUnhBLDYo7q4bJRbZyBt+LPAaSAbHpusnN2k3qenjJDqJpK1AZMZ/HUUtgo+ExJMKdnb8xzACaBt+alo27uTmQ0j+C3uCy+NcwVyMA8Fhjjr6i63KI+qwFmtE4WWYr99De6J7Sz/Lo2qEUyI6dpHk1PuY7QIKsG5STJDAH89uy80r8kFA0KWQVjb+1ytsYeYXWVfSONPiGz10OmsAaDwZdoRjasjWIfY/VImNrFGCs=
+branches:
+  only:
+  - master

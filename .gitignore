@@ -70,6 +70,7 @@ yarn-error.log
 
 # Jest result for addon-jest
 stories/jest-test-results.json
+stories/jest-image-test-results.json
 
 # Built storybook
 storybook-static/
