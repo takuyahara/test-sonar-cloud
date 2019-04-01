@@ -3,6 +3,7 @@ dist: trusty
 node_js:
 - 11.1.0
 addons:
+  chrome: stable
   apt:
     packages:
       - libnss3
