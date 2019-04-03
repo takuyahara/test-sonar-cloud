@@ -17,6 +17,17 @@ before_script:
 # - yarn coverage
 - yarn test-unwatch
 - yarn test-image-ci
+- openssl aes-256-cbc -K $encrypted_9bfc0d6142a0_key -iv $encrypted_9bfc0d6142a0_iv -in ./id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+- git config --global user.email "h.taku86@gmail.com"
+- git config --global user.name "takuyahara"
+- git config --global url."git@github.com:".insteadOf "https://github.com/"
+# Build Storybook
+- git checkout -b image master
+- git add .
+- git commit -m "$TRAVIS_COMMIT_MESSAGE"
+- git push -u origin image --force
 script:
 - sonar-scanner
 addons:
