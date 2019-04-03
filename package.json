@@ -62,7 +62,7 @@
     "test-image-ci": "start-server-and-test storybook http://localhost:6006 test-image-unwatch",
     "test-image": "yarn test-image-generate-report --watchAll",
     "test-image-unwatch": "yarn test-image-generate-report",
-    "test-image-generate-report": "jest -c jest-image.config.js --json --outputFile=./stories/jest-image-test-results.json",
+    "test-image-generate-report": "jest -c jest-image.config.js --updateSnapshot --json --outputFile=./stories/jest-image-test-results.json",
     "test-image-clean": "find __tests-image__ -name __image_snapshots__ -type d | xargs -I {} rm -rf {}",
     "clean": "yarn test-image-clean"
   },
