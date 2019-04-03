@@ -9,6 +9,9 @@ describe(`RingStepped`, () => {
 
   it(`Default`, async () => {
     const image = await page.screenshot();
-    expect(image).toMatchImageSnapshot();
+    expect(image).toMatchImageSnapshot({
+      failureThreshold: '0.99',
+      failureThresholdType: 'percent'
+    });
   });
 });

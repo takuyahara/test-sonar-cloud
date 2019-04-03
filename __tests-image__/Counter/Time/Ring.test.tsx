@@ -11,7 +11,10 @@ describe(`Ring`, () => {
 
   it(`Default`, async () => {
     const image = await page.screenshot();
-    expect(image).toMatchImageSnapshot();
+    expect(image).toMatchImageSnapshot({
+      failureThreshold: '0.99',
+      failureThresholdType: 'percent'
+    });
   });
   it(`Progress: 50%`, async () => {
     const bcr = await page.evaluate((selector: string) => {
@@ -25,6 +28,9 @@ describe(`Ring`, () => {
     const y = 75 + bcr.top;
     await page.mouse.click(x, y);
     const image = await page.screenshot();
-    expect(image).toMatchImageSnapshot();
+    expect(image).toMatchImageSnapshot({
+      failureThreshold: '0.99',
+      failureThresholdType: 'percent'
+    });
   });
 });
