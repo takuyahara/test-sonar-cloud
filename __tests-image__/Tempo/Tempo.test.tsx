@@ -10,7 +10,7 @@ describe(`Tempo`, () => {
     await page.goto(`http://localhost:6006/iframe.html?id=tempo--from`);
     const image = await page.screenshot();
     expect(image).toMatchImageSnapshot({
-      failureThreshold: '0.99',
+      failureThreshold: '0.1',
       failureThresholdType: 'percent'
     });
   });
@@ -18,7 +18,7 @@ describe(`Tempo`, () => {
     await page.goto(`http://localhost:6006/iframe.html?id=tempo--to`);
     const image = await page.screenshot();
     expect(image).toMatchImageSnapshot({
-      failureThreshold: '0.99',
+      failureThreshold: '0.1',
       failureThresholdType: 'percent'
     });
   });
