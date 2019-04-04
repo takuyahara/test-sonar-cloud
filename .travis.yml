@@ -15,8 +15,8 @@ before_script:
 # - yarn tslint
 # - yarn stylelint
 # - yarn coverage
-script:
 - yarn test-unwatch
+script:
 - yarn test-image-ci
 - openssl aes-256-cbc -K $encrypted_9bfc0d6142a0_key -iv $encrypted_9bfc0d6142a0_iv -in ./id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
